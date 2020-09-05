@@ -26,6 +26,13 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
+                <a class="nav-link" href="{{ url('/home') }}">
+                   Home
+                </a>
+                <a class="nav-link" href="{{ url('/page') }}">
+                    Page
+                </a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -73,7 +80,16 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            <div class='row'>
+                <div class='col-4'>
+                    <div class='container'>
+                        Sidebar
+                    </div>
+                </div>
+                <div class='col-8'>
+                    @yield('content')
+                </div>
+            </div>
         </main>
     </div>
 </body>
