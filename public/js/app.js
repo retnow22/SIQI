@@ -49885,3 +49885,9 @@ module.exports = __webpack_require__(/*! C:\Users\Retno\siqi\resources\sass\app.
 /***/ })
 
 /******/ });
+// Responsive Sidebar Test
+$(document).ready(function() {
+	$('.nav-trigger').click(function() {
+		$('.side-nav').toggleClass('visible');
+	});
+});

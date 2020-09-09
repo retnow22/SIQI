@@ -11,26 +11,37 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/data.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700, 600,500,400,300' rel='stylesheet' type='text/css'>
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <div class="container">                        
+            <div class="container-fluid">                        
+                <a href="#" class="nav-trigger"><span></span></a>
                 <div class="navbar-header pull-left">
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="storage/logo.png" width="35" height="30" class="d-inline-block align-top" alt="">
+                        <img src="storage/logoapp.png" width="45" height="30" class="d-inline-block align-top" alt="">
                         SIAKAD SQI UNJ
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    <a class="dropdown-toggle" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <!-- <span class="dropdown-toggle"></span> -->
+                </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -74,60 +85,20 @@
             </div>
         </nav>
         <main class="main-container">
-            <div id= "sidebar" class="sidebar-container">
-            <script type="text/javascript">
-				try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
-			</script>
-              <ul class="sidebar-navigation">
-                <li>
-                  <a href="#">
-                  <img src="storage/logo.png" width="25" height="20"> Beranda
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-tachometer" aria-hidden="true"></i> Profil
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-users" aria-hidden="true"></i> Rencana Studi
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-cog" aria-hidden="true"></i> Hasil Studi
-                  </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-info-circle" aria-hidden="true"></i> Laporan KBM
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-info-circle" aria-hidden="true"></i> Pembayaran
-                    </a>
-                </li>
-                </ul>
-                <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-					<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
-				</div>
-				<script type="text/javascript">
-					try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
-				</script>
+            @include('layouts/sidebar')
+        <!-- <div class="row">
+            <div class="col-2">
+                @include('layouts/sidebar-teacher')
             </div>
-
+            <div class="col-10"> -->
                 <div class="content-container">
-
-                <div class="container-fluid">
-
                     <!-- Main component for a primary marketing message or call to action -->
-                    <div class="jumbotron">
+                    <div class="jumbotron jumbotron-fluid">
                         @yield('content')
                     </div>
                 </div>
-                </div>
+            <!-- </div>
+        </div> -->
         </main>
     </div>
 </body>
