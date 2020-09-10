@@ -32,7 +32,7 @@
 							<span>Laporan KBM</span>
 						</a>
 					</li>
-					<li class="active">
+					<li>
 						<a href="#">
 							<span><i class="fa fa-group"></i></span>
 							<span>Data Rombel</span>

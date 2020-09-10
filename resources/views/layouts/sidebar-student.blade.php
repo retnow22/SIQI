@@ -2,13 +2,13 @@
 			<nav>
 				<ul>
 					<li>
-						<a href="#">
+						<a href="{{ url('/home') }}">
 							<span><i class="fa fa-home"></i></span>
 							<span>Beranda</span>
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ url('/profil') }}">
 
 							<span><i class="fa fa-user-circle-o"></i></span>
 							<span>Profil</span>

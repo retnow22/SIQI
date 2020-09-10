@@ -87,8 +87,8 @@
         </nav>
 
         <!-- @include('layouts/sidebar-admin') -->
-        <!-- @include('layouts/sidebar-student') -->
-        @include('layouts/sidebar-teacher')
+        @include('layouts/sidebar-student')
+        <!-- @include('layouts/sidebar-teacher') -->
 
 
         <!-- <main class="main-container">
