@@ -7,6 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <link rel="icon" type="image/png" href="storage/logo.png">
     <title>SIQI</title>
 
     <!-- Scripts -->
@@ -84,22 +85,32 @@
                 </div>
             </div>
         </nav>
-        <main class="main-container">
-            @include('layouts/sidebar')
-        <!-- <div class="row">
+
+        <!-- @include('layouts/sidebar-admin') -->
+        <!-- @include('layouts/sidebar-student') -->
+        @include('layouts/sidebar-teacher')
+
+
+        <!-- <main class="main-container">
+        <div class="row">
             <div class="col-2">
-                @include('layouts/sidebar-teacher')
             </div>
-            <div class="col-10"> -->
+            <div class="col-10">
                 <div class="content-container">
-                    <!-- Main component for a primary marketing message or call to action -->
+                   /* Main component for a primary marketing message or call to action */
                     <div class="jumbotron jumbotron-fluid">
                         @yield('content')
                     </div>
                 </div>
-            <!-- </div>
-        </div> -->
-        </main>
+            </div>
+        </div>
+        </main> -->
+		<div class="main-content">
+            <!-- @yield('content') -->
+			<div class="main">
+                @yield('content')
+			</div>
+		</div>
     </div>
 </body>
 </html>
