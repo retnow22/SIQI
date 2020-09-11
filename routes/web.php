@@ -21,3 +21,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profil', 'ProfilController@index')->name('profil');
+Route::get('/hasil-studi', 'HasilStudiController@index')->name('hasil-studi');

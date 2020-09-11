@@ -2114,6 +2114,28 @@ pre code {
   border: 0;
 }
 
+/* table custom */
+.table-custom {
+  border: 1px solid #dee2e6;
+}
+
+.table-custom th,
+.table-custom td {
+  border: 1px solid #dee2e6;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table-custom .thead-custom th {
+  color: #fff;
+  background-color: #8c929e;
+  border-color: #dee2e6;
+}
+
+.table-custom tbody tr:nth-of-type(odd){
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 .form-control {
   display: block;
   width: 100%;

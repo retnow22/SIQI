@@ -21,7 +21,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ url('/hasil-studi') }}">
 							<span><i class="fa fa-graduation-cap"></i></span>
 							<span>Hasil Studi</span>
 						</a>
