@@ -90,26 +90,10 @@
         @include('layouts/sidebar-student')
         <!-- @include('layouts/sidebar-teacher') -->
 
-
-        <!-- <main class="main-container">
-        <div class="row">
-            <div class="col-2">
-            </div>
-            <div class="col-10">
-                <div class="content-container">
-                   /* Main component for a primary marketing message or call to action */
-                    <div class="jumbotron jumbotron-fluid">
-                        @yield('content')
-                    </div>
-                </div>
-            </div>
-        </div>
-        </main> -->
-		<div class="main-content">
-            <!-- @yield('content') -->
-			<div class="main">
+        <div class="main-content">
+			<div class="main-content-inner">
                 @yield('content')
-			</div>
+            </div>
 		</div>
     </div>
 </body>

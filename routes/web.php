@@ -22,3 +22,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profil', 'ProfilController@index')->name('profil');
 Route::get('/hasil-studi', 'HasilStudiController@index')->name('hasil-studi');
+Route::get('/rencana-studi', 'RencanaStudiController@index')->name('rencana-studi');
+Route::get('/presensi-peserta', 'PresensiPesertaController@index')->name('presensi-peserta');
+Route::get('/pembayaran', 'PembayaranController@index')->name('pembayaran');

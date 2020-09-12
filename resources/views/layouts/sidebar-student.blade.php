@@ -15,7 +15,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ url('/rencana-studi') }}">
 							<span><i class="fa fa-book"></i></span>
 							<span>Rencana Studi</span>
 						</a>
@@ -27,15 +27,15 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<span><i class="fa fa-edit"></i></span>
+						<a href="{{ url('/presensi-peserta') }}">
+							<span><i class="fa fa-file-text"></i></span>
 							<span>Laporan KBM</span>
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ url('/pembayaran') }}">
 							<span><i class="fa fa-credit-card-alt"></i></span>
-							<span>Pembayaran</span>
+							<span>Status Pembayaran</span>
 						</a>
 					</li>
 				</ul>

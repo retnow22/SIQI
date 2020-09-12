@@ -5,8 +5,8 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item active" aria-current="page">
-                <span><i class="fa fa-graduation-cap"></i></span>
-				<span>Hasil Studi</span>
+                <span><i class="fa fa-book"></i></span>
+				<span>Rencana Studi</span>
             </li>
         </ol>
     </nav>
@@ -32,69 +32,85 @@
                         </dl>
                     </p>
                     <br>
-                    <h4 class="text-info"> Daftar Hasil Studi </h4>
+                    <h4 class="text-info"> Pilih Jadwal </h4>
                     <br>
                     <table class="table table-custom table-sm">
                         <thead class="thead-custom">
                             <tr>
                             <th scope="col">No</th>
-                            <th scope="col">Semester</th>
                             <th scope="col">Kode MP</th>
                             <th scope="col">Mata Pelajaran</th>
+                            <th scope="col">Semester</th>
+                            <th scope="col">Hari</th>
+                            <th scope="col">Waktu</th>
+                            <th scope="col">Level</th>
                             <th scope="col">Pengajar</th>
-                            <th scope="col">Nilai Lisan</th>
-                            <th scope="col">Nilai Teori</th>
-                            <th scope="col">Nilai Akhir</th>
-                            <th scope="col">Keterangan</th>
-                            <th scope="col">Cetak KHS</th>
+                            <th scope="col">Kuota</th>
+                            <th scope="col">Pilih Jadwal</th>                          
                             </tr>
                         </thead>
                             <tbody>
                                 <tr>
                                     <td scope="row">1</td>
+                                    <td>0041</td>
+                                    <td>Tahsin 4</td>
                                     <td>001</td>
-                                    <td>0021</td>
-                                    <td>Tahsin 2 Buku Jilid 2.2</td>
+                                    <td>Senin</td>
+                                    <td>08.00-10.00</td>
+                                    <td>6</td>
                                     <td>Shifa</td>
-                                    <td>85</td>
-                                    <td>-</td>
-                                    <td>85</td>
-                                    <td>Lulus</td>
+                                    <td>6</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="ace-icon fa fa-print"></i>
+                        				Pilih
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td scope="row">2</td>
-                                    <td>002</td>
-                                    <td>0034</td>
-                                    <td>Tahsin 3 Buku Jilid 3.1</td>
-                                    <td>Aulia</td>
-                                    <td>85</td>
-                                    <td>90</td>
-                                    <td>87,5</td>
-                                    <td>Lulus</td>
+                                    <td>0042</td>
+                                    <td>Tahsin 4</td>
+                                    <td>001</td>
+                                    <td>Senin</td>
+                                    <td>10.00-12.00</td>
+                                    <td>6</td>
+                                    <td>Shifa</td>
+                                    <td>3</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="ace-icon fa fa-print"></i>
+                        				Pilih
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td scope="row">3</td>
-                                    <td>003</td>
-                                    <td>0034</td>
-                                    <td>Tahsin 4 Buku Jilid 3.2</td>
-                                    <td>Shifa</td>
-                                    <td>85</td>
-                                    <td>85</td>
-                                    <td>85</td>
-                                    <td>Lulus</td>
+                                    <td>0043</td>
+                                    <td>Tahsin 4</td>
+                                    <td>001</td>
+                                    <td>Selasa</td>
+                                    <td>08.00-10.00</td>
+                                    <td>6</td>
+                                    <td>Aulia</td>
+                                    <td>10</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="ace-icon fa fa-print"></i>
+                        				Pilih
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">4</td>
+                                    <td>0044</td>
+                                    <td>Tahsin 4</td>
+                                    <td>001</td>
+                                    <td>Selasa</td>
+                                    <td>13.00-15.00</td>
+                                    <td>6</td>
+                                    <td>Aulia</td>
+                                    <td>5</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary" onclick="">
+                        				Pilih
                                         </button>
                                     </td>
                                 </tr>

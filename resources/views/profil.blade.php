@@ -16,11 +16,18 @@
                 <div class="card-header text-primary">Status Peserta</div>
                 <div class="card-body">
                     <p class="card-text">
-                        Nomor Induk     : 0000000001
-                        <br> 
-                        Level           : Tahsin 1
-                        <br>
-                        Semester Masuk  : 001
+                        <dl class="row">
+                            <div class="col-md-6">
+                            <div class="row">
+                                <dt class="col-sm-4 text-right">Nomor Induk :</dt>
+                                <dd class="col-sm-8">0000000001</dd>
+                                <dt class="col-sm-4 text-right">Level :</dt>
+                                <dd class="col-sm-8">Tahsin 4</dd>
+                                <dt class="col-sm-4 text-right">Semester Masuk :</dt>
+                                <dd class="col-sm-8">001</dd>
+                            </div>
+                            </div>
+                        </dl>
                     </p>
                 </div>
             </div>
