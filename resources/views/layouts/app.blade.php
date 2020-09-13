@@ -29,6 +29,9 @@
 
     <!-- Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Date Picker -->
+    
 </head>
 <body>
     <div id="app">
@@ -87,8 +90,8 @@
         </nav>
 
         <!-- @include('layouts/sidebar-admin') -->
-        @include('layouts/sidebar-student')
-        <!-- @include('layouts/sidebar-teacher') -->
+        <!-- @include('layouts/sidebar-student') -->
+        @include('layouts/sidebar-teacher')
 
         <div class="main-content">
 			<div class="main-content-inner">

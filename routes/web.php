@@ -25,3 +25,8 @@ Route::get('/hasil-studi', 'HasilStudiController@index')->name('hasil-studi');
 Route::get('/rencana-studi', 'RencanaStudiController@index')->name('rencana-studi');
 Route::get('/presensi-peserta', 'PresensiPesertaController@index')->name('presensi-peserta');
 Route::get('/pembayaran', 'PembayaranController@index')->name('pembayaran');
+Route::get('/profil-pengajar', 'ProfilPengajarController@index')->name('profil-pengajar');
+Route::get('/jadwal-mengajar', 'JadwalMengajarController@index')->name('jadwal-mengajar');
+Route::get('/hasil-studi-peserta', 'HasilStudiPesertaController@index')->name('hasil-studi-peserta');
+Route::get('/data-rombel', 'DataRombelController@index')->name('data-rombel');
+Route::get('/laporan-pengajar', 'LaporanPengajarController@index')->name('laporan-pengajar');
