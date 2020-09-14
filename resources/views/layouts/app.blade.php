@@ -89,9 +89,9 @@
             </div>
         </nav>
 
-        <!-- @include('layouts/sidebar-admin') -->
+        @include('layouts/sidebar-admin')
         <!-- @include('layouts/sidebar-student') -->
-        @include('layouts/sidebar-teacher')
+        <!-- @include('layouts/sidebar-teacher') -->
 
         <div class="main-content">
 			<div class="main-content-inner">

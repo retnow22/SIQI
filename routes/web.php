@@ -30,3 +30,4 @@ Route::get('/jadwal-mengajar', 'JadwalMengajarController@index')->name('jadwal-m
 Route::get('/hasil-studi-peserta', 'HasilStudiPesertaController@index')->name('hasil-studi-peserta');
 Route::get('/data-rombel', 'DataRombelController@index')->name('data-rombel');
 Route::get('/laporan-pengajar', 'LaporanPengajarController@index')->name('laporan-pengajar');
+Route::get('/kelola-akun', 'KelolaAkunController@index')->name('kelola-akun');

@@ -75,7 +75,7 @@
                                     <td>6</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
-                        				+
+                        				<i class="fa fa-plus"></i>
                                         </button>
                                     </td>
                                 </tr>
@@ -89,7 +89,7 @@
                                     <td>6</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
-                        				+
+                        				<i class="fa fa-plus"></i>
                                         </button>
                                     </td>
                                 </tr>
@@ -103,7 +103,7 @@
                                     <td>6</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
-                        				+
+                        				<i class="fa fa-plus"></i>
                                         </button>
                                     </td>
                                 </tr>
@@ -117,7 +117,7 @@
                                     <td>5</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
-                        				+
+                        				<i class="fa fa-plus"></i>
                                         </button>
                                     </td>
                                 </tr>
@@ -131,7 +131,7 @@
                                     <td>5</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
-                        				+
+                        				<i class="fa fa-plus"></i>
                                         </button>
                                     </td>
                                 </tr>
@@ -145,7 +145,7 @@
                                     <td>5</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
-                        				+
+                        				<i class="fa fa-plus"></i>
                                         </button>
                                     </td>
                                 </tr>
