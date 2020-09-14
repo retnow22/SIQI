@@ -15,13 +15,13 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ url('/kelola-jadwal') }}">
 							<span><i class="fa fa-calendar"></i></span>
 							<span>Kelola Jadwal</span>
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ url('/nilai-uas') }}">
 							<span><i class="fa fa-graduation-cap"></i></span>
 							<span>Nilai UAS</span>
 						</a>
@@ -33,7 +33,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ url('/kelola-rombel') }}">
 							<span><i class="fa fa-group"></i></span>
 							<span>Data Rombel</span>
 						</a>

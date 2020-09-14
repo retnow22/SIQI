@@ -31,3 +31,7 @@ Route::get('/hasil-studi-peserta', 'HasilStudiPesertaController@index')->name('h
 Route::get('/data-rombel', 'DataRombelController@index')->name('data-rombel');
 Route::get('/laporan-pengajar', 'LaporanPengajarController@index')->name('laporan-pengajar');
 Route::get('/kelola-akun', 'KelolaAkunController@index')->name('kelola-akun');
+Route::get('/kelola-jadwal', 'KelolaJadwalController@index')->name('kelola-jadwal');
+Route::get('/nilai-uas', 'NilaiUasController@index')->name('nilai-uas');
+Route::get('/kelola-rombel', 'KelolaRombelController@index')->name('kelola-rombel');
+
