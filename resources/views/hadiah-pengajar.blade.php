@@ -5,8 +5,8 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item active" aria-current="page">
-                <span><i class="fa fa-group"></i></span>
-				<span>Data Rombel</span>
+                <span><i class="fa fa-envelope"></i></span>
+				<span>Hadiah Pengajar</span>
             </li>
         </ol>
     </nav>
@@ -15,10 +15,27 @@
             <div class="card border-light mb-3">
                 <div class="card-header text-primary"></div>
                 <div class="card-body">
+                <h4 class="text-info"> Nominal </h4>
+                <div class ="row">
+                        <div class="col-3">
+                            <div class ="row">
+                                <label for="inputNominal" class="col-sm-6 text-right">Ubah Nominal :</label>
+                                <div class="col-sm-6 input-group input-group-sm mb-3">
+                                    <input type="text" class="form-control" placeholder="" aria-label="fee" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button">
+                                            <i class="fa fa-save"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="text-info"> Tampilkan Data </h4>
                     <div class ="row">
                         <div class="col-3">
                             <div class ="row">
-                                <label for="searchSchedule" class="col-sm-3 text-right">Cari :</label>
+                                <label for="search" class="col-sm-3 text-right">Cari :</label>
                                 <div class="col-sm-9 input-group input-group-sm mb-3">
                                     <input type="text" class="form-control" placeholder="" aria-label="jadwal" aria-describedby="basic-addon2">
                                     <div class="input-group-append">
@@ -29,8 +46,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <br>
+                    </div>                    
                     <div class ="row">
                         <div class="col-sm-12">
                         <div class="row">
@@ -68,33 +84,25 @@
                         <thead class="thead-custom">
                             <tr>
                             <th scope="col">No</th>
-                            <th scope="col">Kode Rombel</th>
-                            <th scope="col">Kode MP</th>
+                            <th scope="col">Id</th>
                             <th scope="col">Semester</th>
-                            <th scope="col">Mata Pelajaran</th>
-                            <th scope="col">Hari</th>
-                            <th scope="col">Waktu</th>                            
-                            <th scope="col">Kode Pengajar</th>
+                            <th scope="col">NIP</th>
                             <th scope="col">Nama Pengajar</th>
-                            <th scope="col">Daftar Peserta</th>
+                            <th scope="col">Jumlah Mengajar</th>
+                            <th scope="col">Nominal</th>
+                            <th scope="col">Total Pembayaran</th>                        
                             <th scope="col">Action</th>
                         </thead>
                             <tbody>
                                 <tr>
                                     <td scope="row">1</td>
-                                    <td>1001</td>
-                                    <td>0011</td>
+                                    <td>0001</td>
                                     <td>001</td>
-                                    <td>Pra Tahsin 1 Buku Jilid 1.1</td>
-                                    <td>Senin</td>
-                                    <td>08.00-10.00</td>
-                                    <td>PA</td>
-                                    <td>Putri Ahma</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				Lihat Peserta
-                                        </button>
-                                    </td>
+                                    <td>4000000001</td>
+                                    <td>Retno Wulandari</td>
+                                    <td>20</td>
+                                    <td>25.000</td>
+                                    <td>500.000</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
                         				<i class="fa fa-edit"></i>
@@ -106,19 +114,13 @@
                                 </tr>
                                 <tr>
                                     <td scope="row">2</td>
-                                    <td>1002</td>
-                                    <td>0012</td>
+                                    <td>0002</td>
                                     <td>001</td>
-                                    <td>Pra Tahsin 1 Buku Jilid 1.1</td>
-                                    <td>Senin</td>
-                                    <td>08.00-10.00</td>
-                                    <td>AD</td>
-                                    <td>Ayu Dini</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				Lihat Peserta
-                                        </button>
-                                    </td>
+                                    <td>4000000004</td>
+                                    <td>Ani Sholehah</td>
+                                    <td>10</td>
+                                    <td>25.000</td>
+                                    <td>250.000</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
                         				<i class="fa fa-edit"></i>
@@ -130,19 +132,13 @@
                                 </tr>
                                 <tr>
                                     <td scope="row">3</td>
-                                    <td>1003</td>
-                                    <td>0013</td>
+                                    <td>0003</td>
                                     <td>001</td>
-                                    <td>Pra Tahsin 1 Buku Jilid 1.1</td>
-                                    <td>Senin</td>
-                                    <td>10.00-12.00</td>
-                                    <td>SA</td>
-                                    <td>Shifa Aulia</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				Lihat Peserta
-                                        </button>
-                                    </td>
+                                    <td>2000000005</td>
+                                    <td>Bella Aisyah</td>
+                                    <td>15</td>
+                                    <td>25.000</td>
+                                    <td>375.000</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
                         				<i class="fa fa-edit"></i>
@@ -154,19 +150,13 @@
                                 </tr>
                                 <tr>
                                     <td scope="row">4</td>
-                                    <td>2001</td>
-                                    <td>0021</td>
+                                    <td>0004</td>
                                     <td>001</td>
-                                    <td>Pra Tahsin 2 Buku Jilid 1.2</td>
-                                    <td>Selasa</td>
-                                    <td>08.00-10.00</td>
-                                    <td>SA</td>
-                                    <td>Shifa Aulia</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				Lihat Peserta
-                                        </button>
-                                    </td>
+                                    <td>1000000007</td>
+                                    <td>Ira Sumira</td>
+                                    <td>20</td>
+                                    <td>25.000</td>
+                                    <td>500.000</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
                         				<i class="fa fa-edit"></i>
@@ -178,19 +168,13 @@
                                 </tr>
                                 <tr>
                                     <td scope="row">5</td>
-                                    <td>2002</td>
-                                    <td>0022</td>
+                                    <td>0005</td>
                                     <td>001</td>
-                                    <td>Pra Tahsin 2 Buku Jilid 1.2</td>
-                                    <td>Selasa</td>
-                                    <td>08.00-10.00</td>
-                                    <td>RWD</td>
-                                    <td>Retno Wulandari</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				Lihat Peserta
-                                        </button>
-                                    </td>
+                                    <td>1000000008</td>
+                                    <td>Wulandari</td>
+                                    <td>17</td>
+                                    <td>25.000</td>
+                                    <td>425.000</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
                         				<i class="fa fa-edit"></i>

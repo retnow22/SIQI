@@ -16,10 +16,10 @@
                 <div class="card-header text-primary"></div>
                 <div class="card-body">
                     <div class ="row">
-                        <div class="col-4">
+                        <div class="col-3">
                             <div class ="row">
-                                <label for="searchSchedule" class="col-sm-2 text-right">Cari :</label>
-                                <div class="col-sm-10 input-group input-group-sm mb-3">
+                                <label for="searchSchedule" class="col-sm-3 text-right">Cari :</label>
+                                <div class="col-sm-9 input-group input-group-sm mb-3">
                                     <input type="text" class="form-control" placeholder="" aria-label="jadwal" aria-describedby="basic-addon2">
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button">

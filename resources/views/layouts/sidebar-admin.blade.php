@@ -51,9 +51,9 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ url('/hadiah-pengajar') }}">
 							<span><i class="fa fa-envelope"></i></span>
-							<span>Kafalah Pengajar</span>
+							<span>Hadiah Pengajar</span>
 						</a>
 					</li>
 				</ul>

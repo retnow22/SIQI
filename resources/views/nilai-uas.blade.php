@@ -16,10 +16,10 @@
                 <div class="card-header text-primary"></div>
                 <div class="card-body">
                     <div class ="row">
-                        <div class="col-4">
+                        <div class="col-3">
                             <div class ="row">
-                                <label for="searchSchedule" class="col-sm-2 text-right">Cari :</label>
-                                <div class="col-sm-10 input-group input-group-sm mb-3">
+                                <label for="searchSchedule" class="col-sm-3 text-right">Cari :</label>
+                                <div class="col-sm-9 input-group input-group-sm mb-3">
                                     <input type="text" class="form-control" placeholder="" aria-label="jadwal" aria-describedby="basic-addon2">
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button">
@@ -182,28 +182,6 @@
                                     <td>75</td>
                                     <td>80</td>
                                     <td>Belum Lulus</td>
-                                    <td>Shifa</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">1</td>
-                                    <td>0001</td>
-                                    <td>001</td>
-                                    <td>0000000001</td>
-                                    <td>Retno Wulandari</td>
-                                    <td>0041</td>
-                                    <td>90</td>
-                                    <td>90</td>
-                                    <td>90</td>
-                                    <td>80</td>
-                                    <td>Lulus</td>
                                     <td>Shifa</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
