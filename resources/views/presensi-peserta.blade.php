@@ -34,6 +34,20 @@
                     <br>
                     <h4 class="text-info"> Daftar Presensi Peserta </h4>
                     <br>
+                    <div class ="row">
+                        <div class="col-sm-12">
+                        <div class="row">
+                                <div class="col-sm-3 input-group input-group-sm mb-3">
+                                    <select class="custom-select" id="inputGroupSelect02">
+                                        <option selected>Pilih</option>
+                                        <option value="1">001</option>
+                                        <option value="2">002</option>
+                                        <option value="3">003</option>
+                                    </select>
+                                    <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect02">Pilih Semester</label>
+                                    </div>
+                                </div>
                     <table class="table table-custom table-sm">
                         <thead class="thead-custom">
                             <tr>

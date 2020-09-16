@@ -92,6 +92,7 @@
                             <th scope="col">Nominal</th>
                             <th scope="col">Total Pembayaran</th>                        
                             <th scope="col">Action</th>
+                            </tr>
                         </thead>
                             <tbody>
                                 <tr>

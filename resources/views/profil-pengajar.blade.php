@@ -80,12 +80,6 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="name" class="col-sm-2 col-form-label">Angkatan</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
                         <label for="phoneNumber" class="col-sm-2 col-form-label">No Hp</label>
                         <div class="col-sm-10">
                         <input type="text" class="form-control" placeholder="">

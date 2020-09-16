@@ -80,6 +80,7 @@
                             <th scope="col">Keterangan</th>
                             <th scope="col">Penguji</th>
                             <th scope="col">Action</th>
+                            </tr>
                         </thead>
                             <tbody>
                                 <tr>

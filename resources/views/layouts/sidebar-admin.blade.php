@@ -27,9 +27,9 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<span><i class="fa fa-edit"></i></span>
-							<span>Laporan KBM</span>
+						<a href="{{ url('/data-presensi') }}">
+							<span><i class="fa fa-server"></i></span>
+							<span>Data Presensi</span>
 						</a>
 					</li>
 					<li>
@@ -39,13 +39,13 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ url('/data-peserta') }}">
 							<span><i class="fa fa-user"></i></span>
 							<span>Data Peserta</span>
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ url('/data-pengajar') }}">
 							<span><i class="fa fa-user"></i></span>
 							<span>Data Pengajar</span>
 						</a>

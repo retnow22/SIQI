@@ -78,6 +78,7 @@
                             <th scope="col">Pengajar</th>
                             <th scope="col">Kuota</th>
                             <th scope="col">Action</th>
+                            </tr>
                         </thead>
                             <tbody>
                                 <tr>

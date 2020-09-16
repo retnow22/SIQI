@@ -16,34 +16,20 @@
                 <div class="card-header text-primary"></div>
                 <div class="card-body">
                     <div class ="row">
-                        <div class="col-3">
-                            <div class ="row">
-                                <label for="searchUser" class="col-sm-3 text-right">Cari :</label>
-                                <div class="col-sm-9 input-group input-group-sm mb-3">
-                                    <input type="text" class="form-control" placeholder="Ketik username" aria-label="Account's username" aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class ="row">
                         <div class="col-sm-12">
                         <div class="row">
-                                <div class="col-sm-3 input-group input-group-sm mb-3">
-                                    <select class="custom-select" id="inputGroupSelect02">
-                                        <option selected>Pilih</option>
-                                        <option value="1">5</option>
-                                        <option value="2">10</option>
-                                        <option value="3">15</option>
-                                    </select>
-                                    <div class="input-group-append">
-                                    <label class="input-group-text" for="inputGroupSelect02">Data per halaman</label>
+                                <div class="col-sm-3">
+                                <div class="row">
+                                    <label for="searchUser" class="col-sm-3 text-right">Cari :</label>
+                                    <div class="col-sm-9 input-group input-group-sm mb-3">
+                                        <input type="text" class="form-control" placeholder="Ketik username" aria-label="Account's username" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
                                     </div>
+                                </div>
                                 </div>
                                 <div class="col-sm-5">
                                 </div>
@@ -70,13 +56,16 @@
                             <th scope="col">No</th>
                             <th scope="col">Username</th>
                             <th scope="col">Password</th>
+                            <th scope="col">Role</th>
                             <th scope="col">Action</th>
+                            </tr>
                         </thead>
                             <tbody>
                                 <tr>
                                     <td scope="row">1</td>
                                     <td>admin1</td>
                                     <td>admin1</td>
+                                    <td>admin</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
                         				<i class="fa fa-edit"></i>
@@ -90,6 +79,7 @@
                                     <td scope="row">2</td>
                                     <td>admin2</td>
                                     <td>admin2</td>
+                                    <td>admin</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
                         				<i class="fa fa-edit"></i>
@@ -103,6 +93,7 @@
                                     <td scope="row">3</td>
                                     <td>retno41</td>
                                     <td>retno41</td>
+                                    <td>teacher</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
                         				<i class="fa fa-edit"></i>
@@ -116,6 +107,7 @@
                                     <td scope="row">4</td>
                                     <td>wulan21</td>
                                     <td>wulan21</td>
+                                    <td>student</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
                         				<i class="fa fa-edit"></i>
@@ -129,6 +121,7 @@
                                     <td scope="row">5</td>
                                     <td>zahra42</td>
                                     <td>zahra42</td>
+                                    <td>teacher</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
                         				<i class="fa fa-edit"></i>

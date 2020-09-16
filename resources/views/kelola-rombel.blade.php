@@ -78,6 +78,7 @@
                             <th scope="col">Nama Pengajar</th>
                             <th scope="col">Daftar Peserta</th>
                             <th scope="col">Action</th>
+                            </tr>
                         </thead>
                             <tbody>
                                 <tr>
