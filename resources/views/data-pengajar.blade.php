@@ -64,24 +64,25 @@
                             <th scope="col">Jenis Kelamin</th>
                             <th scope="col">Level</th>
                             <th scope="col">Kode Pengajar</th>
-                            <th scope="col">Username</th>
+                            <th scope="col">Userid</th>
                             <th scope="col">Action</th>
                             </tr>
                         </thead>
                             <tbody>
+                            @foreach ($pengajar as $key => $pengajar)
                                 <tr>
-                                    <td scope="row">1</td>
-                                    <td>4000000001</td>
-                                    <td>Retno Wulandari</td>
-                                    <td>Ilmu Komputer</td>
-                                    <td>FMIPA</td>
-                                    <td>UNJ</td>
-                                    <td>081932993706</td>
-                                    <td>retno@gmail.com</td>
-                                    <td>Perempuan</td>
-                                    <td>6</td>
-                                    <td>RWD</td>
-                                    <td>retno141</td>
+                                    <td scope="row">{{ $key + 1 }}</td>
+                                    <td>{{ $pengajar->nip }}</td>
+                                    <td>{{ $pengajar->nama_pengajar }}</td>
+                                    <td>{{ $pengajar->prodi }}</td>
+                                    <td>{{ $pengajar->fakultas }}</td>
+                                    <td>{{ $pengajar->instansi }}</td>
+                                    <td>{{ $pengajar->no_hp }}</td>
+                                    <td>{{ $pengajar->email }}</td>
+                                    <td>{{ $pengajar->jenis_kelamin }}</td>
+                                    <td>{{ $pengajar->level }}</td>
+                                    <td>{{ $pengajar->kode_pengajar }}</td>
+                                    <td>{{ $pengajar->userid }}</td>
                                     <td>
                                         <button class="btn btn-sm btn-primary" onclick="">
                         				<i class="fa fa-edit"></i>
@@ -91,94 +92,7 @@
                                         </button>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td scope="row">2</td>
-                                    <td>4000000002</td>
-                                    <td>Wulandari</td>
-                                    <td>Ilmu Komputer</td>
-                                    <td>FMIPA</td>
-                                    <td>UNJ</td>
-                                    <td>08193333333</td>
-                                    <td>retno1@gmail.com</td>
-                                    <td>Perempuan</td>
-                                    <td>5</td>
-                                    <td>WD</td>
-                                    <td>retno131</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">3</td>
-                                    <td>1000000003</td>
-                                    <td>Ira Sumira</td>
-                                    <td>Bisnis</td>
-                                    <td>FE</td>
-                                    <td>UNJ</td>
-                                    <td>08193222222</td>
-                                    <td>ira@gmail.com</td>
-                                    <td>Perempuan</td>
-                                    <td>1</td>
-                                    <td>IS</td>
-                                    <td>ira121</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">4</td>
-                                    <td>2000000004</td>
-                                    <td>Bella</td>
-                                    <td>Pendidikan Agama Islam</td>
-                                    <td>FIS</td>
-                                    <td>UNJ</td>
-                                    <td>08199999999</td>
-                                    <td>bella@gmail.com</td>
-                                    <td>Perempuan</td>
-                                    <td>4</td>
-                                    <td>BL</td>
-                                    <td>bella141</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">5</td>
-                                    <td>1000000005</td>
-                                    <td>Ani</td>
-                                    <td>Bimbingan Konseling</td>
-                                    <td>FIP</td>
-                                    <td>UNJ</td>
-                                    <td>08193299999</td>
-                                    <td>ani@gmail.com</td>
-                                    <td>Perempuan</td>
-                                    <td>1</td>
-                                    <td>AN</td>
-                                    <td>ani131</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
+                            @endforeach    
                             </tbody>
                     </table>
                     <br>

@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pengajar extends Model
 {
+    protected $table = 'pengajar';
+    
     protected $fillable = [
         'nip',
         'nama_pengajar',
@@ -17,5 +19,5 @@ class Pengajar extends Model
         'jenis_kelamin',
         'level',
         'kode_pengajar'
-    ]
+    ];
 }
