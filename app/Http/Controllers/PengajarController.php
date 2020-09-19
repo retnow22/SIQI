@@ -16,7 +16,7 @@ class PengajarController extends Controller
     {
         $pengajar = Pengajar::all();
         // dd($pengajar);
-        return view('pengajar.data-pengajar',['pengajar'=> $pengajar]);
+        return view('data-pengajar',['pengajar'=> $pengajar]);
     }
 
     /**
@@ -82,6 +82,9 @@ class PengajarController extends Controller
      */
     public function destroy(Pengajar $pengajar)
     {
-        //
+        $pengajar->delete();
+        
+        return redirect()->route('pengajar.index');
+
     }
 }

@@ -45,7 +45,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="{{ url('/pengajar') }}">
+						<a href="{{ route('pengajar.index') }}">
 							<span><i class="fa fa-user"></i></span>
 							<span>Data Pengajar</span>
 						</a>

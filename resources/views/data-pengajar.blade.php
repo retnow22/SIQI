@@ -84,12 +84,14 @@
                                     <td>{{ $pengajar->kode_pengajar }}</td>
                                     <td>{{ $pengajar->userid }}</td>
                                     <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
+                                        <form action="{{ route('pengajar.destroy',$pengajar->id) }}" method="POST">
+                                        <a class="btn btn-primary" href="{{ route('pengajar.edit',$pengajar->id) }}">Edit</a>
+
+                                        @csrf
+                                        @method('DELETE')
+
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach    
