@@ -45,7 +45,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="{{ url('/data-pengajar') }}">
+						<a href="{{ url('/pengajar') }}">
 							<span><i class="fa fa-user"></i></span>
 							<span>Data Pengajar</span>
 						</a>
