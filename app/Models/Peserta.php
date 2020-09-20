@@ -1,23 +1,26 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Pengajar extends Model
+class Peserta extends Model
 {
-    protected $table = 'pengajar';
+    protected $table = 'peserta';
     
     protected $fillable = [
-        'nip',
-        'nama_pengajar',
+        'nis',
+        'nama_peserta',
         'prodi',
         'fakultas',
         'instansi',
+        'angkatan',
         'no_hp',
         'email',
         'jenis_kelamin',
         'level',
-        'kode_pengajar'
+        'status_pembayaran',
+        'semester_masuk'
     ];
+
 }

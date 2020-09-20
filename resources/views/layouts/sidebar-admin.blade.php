@@ -39,7 +39,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="{{ url('/data-peserta') }}">
+						<a href="{{ route('peserta.index') }}">
 							<span><i class="fa fa-user"></i></span>
 							<span>Data Peserta</span>
 						</a>

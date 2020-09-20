@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Pengajar;
+use App\Models\Pengajar;
 use Illuminate\Http\Request;
 
 class PengajarController extends Controller
@@ -16,7 +16,7 @@ class PengajarController extends Controller
     {
         $pengajar = Pengajar::all();
         // dd($pengajar);
-        return view('data-pengajar',['pengajar'=> $pengajar]);
+        return view('pengajar.data-pengajar',['pengajar'=> $pengajar]);
     }
 
     /**

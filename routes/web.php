@@ -36,5 +36,5 @@ Route::get('/nilai-uas', 'NilaiUasController@index')->name('nilai-uas');
 Route::get('/kelola-rombel', 'KelolaRombelController@index')->name('kelola-rombel');
 Route::get('/hadiah-pengajar', 'HadiahPengajarController@index')->name('hadiah-pengajar');
 Route::get('/data-presensi', 'DataPresensiController@index')->name('data-presensi');
-Route::get('/data-peserta', 'DataPesertaController@index')->name('data-peserta');
 Route::resource('pengajar', 'PengajarController');
+Route::resource('peserta', 'PesertaController');

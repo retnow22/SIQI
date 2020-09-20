@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Peserta;
+use App\Models\Peserta;
 use Illuminate\Http\Request;
 
 class PesertaController extends Controller
@@ -14,7 +14,9 @@ class PesertaController extends Controller
      */
     public function index()
     {
-        //
+        $peserta = Peserta::all();
+        return view('peserta.data-peserta',['peserta'=> $peserta]);
+
     }
 
     /**
@@ -80,6 +82,8 @@ class PesertaController extends Controller
      */
     public function destroy(Peserta $peserta)
     {
-        //
+        $peserta->delete();
+        
+        return redirect()->route('peserta.index');
     }
 }

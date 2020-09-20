@@ -50,51 +50,59 @@
                         </div>        
                         </div>
                     </div>
-                    <table class="table table-custom table-sm">
+                    <table class="table table-responsive table-custom table-sm">
                         <thead class="thead-custom">
                             <tr>
                             <th scope="col">No</th>
-                            <th scope="col">NIP</th>
-                            <th scope="col">Nama Pengajar</th>
+                            <th scope="col">NIS</th>
+                            <th scope="col">Nama Peserta</th>
                             <th scope="col">Prodi</th>
                             <th scope="col">Fakultas</th>
                             <th scope="col">Instansi</th>
+                            <th scope="col">Angkatan</th>
                             <th scope="col">No Hp</th>
                             <th scope="col">Email</th>
                             <th scope="col">Jenis Kelamin</th>
                             <th scope="col">Level</th>
-                            <th scope="col">Kode Pengajar</th>
+                            <th scope="col">Status Pembayaran</th>
+                            <th scope="col">Semester Masuk</th>
                             <th scope="col">Userid</th>
                             <th scope="col">Action</th>
                             </tr>
                         </thead>
                             <tbody>
-                            @foreach ($pengajar as $key => $pengajar)
+                            @foreach ($peserta as $key => $peserta)
                                 <tr>
                                     <td scope="row">{{ $key + 1 }}</td>
-                                    <td>{{ $pengajar->nip }}</td>
-                                    <td>{{ $pengajar->nama_pengajar }}</td>
-                                    <td>{{ $pengajar->prodi }}</td>
-                                    <td>{{ $pengajar->fakultas }}</td>
-                                    <td>{{ $pengajar->instansi }}</td>
-                                    <td>{{ $pengajar->no_hp }}</td>
-                                    <td>{{ $pengajar->email }}</td>
-                                    <td>{{ $pengajar->jenis_kelamin }}</td>
-                                    <td>{{ $pengajar->level }}</td>
-                                    <td>{{ $pengajar->kode_pengajar }}</td>
-                                    <td>{{ $pengajar->userid }}</td>
+                                    <td>{{ $peserta->nis }}</td>
+                                    <td>{{ $peserta->nama_peserta }}</td>
+                                    <td>{{ $peserta->prodi }}</td>
+                                    <td>{{ $peserta->fakultas }}</td>
+                                    <td>{{ $peserta->instansi }}</td>
+                                    <td>{{ $peserta->angkatan }}</td>
+                                    <td>{{ $peserta->no_hp }}</td>
+                                    <td>{{ $peserta->email }}</td>
+                                    <td>{{ $peserta->jenis_kelamin }}</td>
+                                    <td>{{ $peserta->level }}</td>
+                                    <td>{{ $peserta->status_pembayaran }}</td>
+                                    <td>{{ $peserta->semester_masuk }}</td>
+                                    <td>{{ $peserta->userid }}</td>
                                     <td>
-                                        <form action="{{ route('pengajar.destroy',$pengajar->id) }}" method="POST">
-                                        <a class="btn btn-primary" href="{{ route('pengajar.edit',$pengajar->id) }}">Edit</a>
+                                        <form action="{{ route('peserta.destroy',$peserta->id) }}" method="POST">
+                                        <a class="btn btn-sm btn-primary" href="{{ route('peserta.edit',$peserta->id) }}">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
 
                                         @csrf
                                         @method('DELETE')
 
-                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                        <button type="submit" class="btn btn-sm btn-danger">
+                                            <i class="fa fa-eraser"></i>
+                                        </button>
                                         </form>
                                     </td>
                                 </tr>
-                            @endforeach    
+                            @endforeach
                             </tbody>
                     </table>
                     <br>
