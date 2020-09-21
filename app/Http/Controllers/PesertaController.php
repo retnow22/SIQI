@@ -85,5 +85,6 @@ class PesertaController extends Controller
         $peserta->delete();
         
         return redirect()->route('peserta.index');
+        
     }
 }
