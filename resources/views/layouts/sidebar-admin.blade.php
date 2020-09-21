@@ -21,7 +21,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="{{ url('/nilai-uas') }}">
+						<a href="{{ route('nilai.index') }}">
 							<span><i class="fa fa-graduation-cap"></i></span>
 							<span>Nilai UAS</span>
 						</a>

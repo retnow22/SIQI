@@ -68,10 +68,8 @@
                         <thead class="thead-custom">
                             <tr>
                             <th scope="col">No</th>
-                            <th scope="col">Id</th>
-                            <th scope="col">Semester</th>
                             <th scope="col">NIS</th>
-                            <th scope="col">Nama Peserta</th>
+                            <!-- <th scope="col">Nama Peserta</th> -->
                             <th scope="col">Kode MP</th>
                             <th scope="col">Nilai Lisan</th>
                             <th scope="col">Nilai Teori</th>
@@ -83,116 +81,33 @@
                             </tr>
                         </thead>
                             <tbody>
+                            @foreach ($nilai as $key => $nilai)
                                 <tr>
-                                    <td scope="row">1</td>
-                                    <td>0001</td>
-                                    <td>001</td>
-                                    <td>0000000001</td>
-                                    <td>Retno Wulandari</td>
-                                    <td>0041</td>
-                                    <td>90</td>
-                                    <td>90</td>
-                                    <td>90</td>
-                                    <td>80</td>
-                                    <td>Lulus</td>
-                                    <td>Shifa</td>
+                                    <td scope="row">{{ $key + 1 }}</td>
+                                    <td>{{ $nilai->nis }}</td>
+                                    <td>{{ $nilai->kode_matpel }}</td>
+                                    <td>{{ $nilai->nilai_lisan }}</td>
+                                    <td>{{ $nilai->nilai_teori }}</td>
+                                    <td>{{ $nilai->nilai_akhir }}</td>
+                                    <td>{{ $nilai->kkm }}</td>
+                                    <td>{{ $nilai->keterangan }}</td>
+                                    <td>{{ $nilai->penguji }}</td>
                                     <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
+                                        <form action="{{ route('nilai.destroy',$nilai->id) }}" method="POST">
+                                        <a class="btn btn-sm btn-primary" href="{{ route('nilai.edit',$nilai->id) }}">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
+
+                                        @csrf
+                                        @method('DELETE')
+
+                                        <button type="submit" class="btn btn-sm btn-danger">
+                                            <i class="fa fa-eraser"></i>
                                         </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
+                                        </form>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td scope="row">2</td>
-                                    <td>0002</td>
-                                    <td>001</td>
-                                    <td>0000000004</td>
-                                    <td>Ani Sholehah</td>
-                                    <td>0031</td>
-                                    <td>85</td>
-                                    <td>90</td>
-                                    <td>87.5</td>
-                                    <td>80</td>
-                                    <td>Lulus</td>
-                                    <td>Aulia</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">3</td>
-                                    <td>0003</td>
-                                    <td>001</td>
-                                    <td>0000000005</td>
-                                    <td>Bella Aisyah</td>
-                                    <td>0042</td>
-                                    <td>80</td>
-                                    <td>80</td>
-                                    <td>80</td>
-                                    <td>80</td>
-                                    <td>Lulus</td>
-                                    <td>Shifa</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">4</td>
-                                    <td>0004</td>
-                                    <td>001</td>
-                                    <td>0000000007</td>
-                                    <td>Ira Sumira</td>
-                                    <td>0021</td>
-                                    <td>75</td>
-                                    <td>-</td>
-                                    <td>75</td>
-                                    <td>70</td>
-                                    <td>Lulus</td>
-                                    <td>Ayu</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">5</td>
-                                    <td>0005</td>
-                                    <td>001</td>
-                                    <td>0000000008</td>
-                                    <td>Wulandari</td>
-                                    <td>0041</td>
-                                    <td>80</td>
-                                    <td>70</td>
-                                    <td>75</td>
-                                    <td>80</td>
-                                    <td>Belum Lulus</td>
-                                    <td>Shifa</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
+                            @endforeach
                             </tbody>
                     </table>
                     <br>
