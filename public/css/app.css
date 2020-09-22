@@ -5573,17 +5573,10 @@ a.badge-dark.focus {
   color: #202326;
 }
 
-/* .alert-success {
+.alert-success {
   color: #1d643b;
   background-color: #d7f3e3;
   border-color: #c7eed8;
-} */
-
-/* Custom alert success */
-.alert-success {
-  color: #1d2464;
-  background-color: #b5cefc;
-  border-color: #adcaff;
 }
 
 .alert-success hr {

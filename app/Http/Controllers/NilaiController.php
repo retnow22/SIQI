@@ -15,7 +15,7 @@ class NilaiController extends Controller
     public function index()
     {
         $nilai = Nilai::all();
-        return view('admin.nilai-uas',['nilai'=> $nilai]);
+        return view('nilai.nilai-uas',['nilai'=> $nilai]);
     }
 
     /**
@@ -25,7 +25,7 @@ class NilaiController extends Controller
      */
     public function create()
     {
-        //
+        return view('nilai.tambah-nilai');
     }
 
     /**
@@ -36,7 +36,22 @@ class NilaiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nis' => 'required',
+            'kode_matpel' => 'required',
+            'nilai_lisan' => 'required',
+            // 'nilai_teori' => 'required',
+            'nilai_akhir' => 'required',
+            'kkm' => 'required',
+            'keterangan' => 'required',
+            'penguji' => 'required',   
+        ]);
+  
+        Nilai::create($request->all());
+   
+        return redirect()->route('nilai.index')
+                        ->with('success','Data Nilai berhasil ditambahkan!');
+
     }
 
     /**
@@ -58,7 +73,7 @@ class NilaiController extends Controller
      */
     public function edit(Nilai $nilai)
     {
-        //
+        return view('nilai.edit-nilai',compact('nilai'));
     }
 
     /**
@@ -70,7 +85,21 @@ class NilaiController extends Controller
      */
     public function update(Request $request, Nilai $nilai)
     {
-        //
+        $request->validate([
+            'nis' => 'required',
+            'kode_matpel' => 'required',
+            'nilai_lisan' => 'required',
+            'nilai_teori' => 'required',
+            'nilai_akhir' => 'required',
+            'kkm' => 'required',
+            'keterangan' => 'required',
+            'penguji' => 'required',
+        ]);
+  
+        $nilai->update($request->all());
+  
+        return redirect()->route('nilai.index')
+                        ->with('success','Data Nilai berhasil diperbarui!');
     }
 
     /**
@@ -83,7 +112,8 @@ class NilaiController extends Controller
     {
         $nilai->delete();
         
-        return redirect()->route('nilai.index');
+        return redirect()->route('nilai.index')
+                        ->with('success','Data Nilai berhasil dihapus!');
 
     }
 }

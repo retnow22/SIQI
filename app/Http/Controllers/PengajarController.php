@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Pengajar;
+namespace App\Http\Controllers;
 
 use App\Models\Pengajar;
 use Illuminate\Http\Request;
@@ -26,7 +26,7 @@ class PengajarController extends Controller
      */
     public function create()
     {
-        //
+        return view('pengajar.tambah-pengajar');
     }
 
     /**
@@ -37,7 +37,24 @@ class PengajarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([   
+            'nip' => 'required',
+            'nama_pengajar' => 'required',
+            'prodi' => 'required',
+            'fakultas' => 'required',
+            'instansi' => 'required',
+            'no_hp' => 'required',
+            'email' => 'required',
+            'jenis_kelamin' => 'required',
+            'level' => 'required',
+            'kode_pengajar' => 'required',    
+        ]);
+  
+        Pengajar::create($request->all());
+   
+        return redirect()->route('pengajar.index')
+                        ->with('success','Data Pengajar berhasil ditambahkan!');
+
     }
 
     /**
@@ -59,7 +76,7 @@ class PengajarController extends Controller
      */
     public function edit(Pengajar $pengajar)
     {
-        //
+        return view('pengajar.edit-pengajar',compact('pengajar'));
     }
 
     /**
@@ -71,7 +88,24 @@ class PengajarController extends Controller
      */
     public function update(Request $request, Pengajar $pengajar)
     {
-        //
+        $request->validate([
+            'nip' => 'required',
+            'nama_pengajar' => 'required',
+            'prodi' => 'required',
+            'fakultas' => 'required',
+            'instansi' => 'required',
+            'no_hp' => 'required',
+            'email' => 'required',
+            'jenis_kelamin' => 'required',
+            'level' => 'required',
+            'kode_pengajar' => 'required',
+        ]);
+  
+        $pengajar->update($request->all());
+  
+        return redirect()->route('pengajar.index')
+                        ->with('success','Data Pengajar berhasil diperbarui!');
+
     }
 
     /**
@@ -84,7 +118,8 @@ class PengajarController extends Controller
     {
         $pengajar->delete();
         
-        return redirect()->route('pengajar.index');
+        return redirect()->route('pengajar.index')
+                        ->with('success','Data Pengajar berhasil dihapus!');
 
     }
 }

@@ -38,9 +38,9 @@
                                         <div class="col-sm-2">
                                         </div>
                                         <div class="col-sm-10">
-                                            <button class="btn btn-md btn-primary" onclick="">
+                                            <a class="btn btn-md btn-primary" href="{{ route('pengajar.create') }}">
                                                 <i class="fa fa-plus"></i> TAMBAH DATA
-                                            </button>
+                                            </a>
                                             <button class="btn btn-md btn-primary" onclick="">
                                                 EKSPORT DATA
                                             </button>
@@ -64,7 +64,7 @@
                             <th scope="col">Jenis Kelamin</th>
                             <th scope="col">Level</th>
                             <th scope="col">Kode Pengajar</th>
-                            <th scope="col">Userid</th>
+                            <!-- <th scope="col">Userid</th> -->
                             <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -82,7 +82,7 @@
                                     <td>{{ $pengajar->jenis_kelamin }}</td>
                                     <td>{{ $pengajar->level }}</td>
                                     <td>{{ $pengajar->kode_pengajar }}</td>
-                                    <td>{{ $pengajar->userid }}</td>
+                                    <!-- <td>{{ $pengajar->userid }}</td> -->
                                     <td>
                                         <form action="{{ route('pengajar.destroy',$pengajar->id) }}" method="POST">
                                         <a class="btn btn-sm btn-primary" href="{{ route('pengajar.edit',$pengajar->id) }}">

@@ -52,9 +52,9 @@
                                         <div class="col-sm-2">
                                         </div>
                                         <div class="col-sm-10">
-                                            <button class="btn btn-md btn-primary" onclick="">
+                                            <a class="btn btn-md btn-primary" href="{{ route('nilai.create') }}">
                                                 <i class="fa fa-plus"></i> TAMBAH DATA
-                                            </button>
+                                            </a>
                                             <button class="btn btn-md btn-primary" onclick="">
                                                 EKSPORT DATA
                                             </button>
@@ -64,7 +64,7 @@
                         </div>        
                         </div>
                     </div>
-                    <table class="table table-responsive table-custom table-sm">
+                    <table class="table table-custom table-sm">
                         <thead class="thead-custom">
                             <tr>
                             <th scope="col">No</th>

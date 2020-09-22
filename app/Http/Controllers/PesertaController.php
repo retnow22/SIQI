@@ -26,7 +26,7 @@ class PesertaController extends Controller
      */
     public function create()
     {
-        //
+        return view('peserta.tambah-peserta');
     }
 
     /**
@@ -37,7 +37,26 @@ class PesertaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([   
+            'nis' => 'required',
+            'nama_peserta' => 'required',
+            'prodi' => 'required',
+            'fakultas' => 'required',
+            'instansi' => 'required',
+            'angkatan' => 'required',
+            'no_hp' => 'required',
+            'email' => 'required',
+            'jenis_kelamin' => 'required',
+            'level' => 'required',
+            'status_pembayaran' => 'required',
+            'semester_masuk' => 'required',    
+        ]);
+  
+        Peserta::create($request->all());
+   
+        return redirect()->route('peserta.index')
+                        ->with('success','Data Peserta berhasil ditambahkan!');
+
     }
 
     /**
@@ -59,7 +78,7 @@ class PesertaController extends Controller
      */
     public function edit(Peserta $peserta)
     {
-        //
+        return view('peserta.edit-peserta',compact('peserta'));
     }
 
     /**
@@ -71,7 +90,26 @@ class PesertaController extends Controller
      */
     public function update(Request $request, Peserta $peserta)
     {
-        //
+        $request->validate([
+            'nis' => 'required',
+            'nama_peserta' => 'required',
+            'prodi' => 'required',
+            'fakultas' => 'required',
+            'instansi' => 'required',
+            'angkatan' => 'required',
+            'no_hp' => 'required',
+            'email' => 'required',
+            'jenis_kelamin' => 'required',
+            'level' => 'required',
+            'status_pembayaran' => 'required',
+            'semester_masuk' => 'required',
+        ]);
+  
+        $peserta->update($request->all());
+  
+        return redirect()->route('peserta.index')
+                        ->with('success','Data Peserta berhasil diperbarui!');
+
     }
 
     /**
@@ -84,7 +122,8 @@ class PesertaController extends Controller
     {
         $peserta->delete();
         
-        return redirect()->route('peserta.index');
-        
+        return redirect()->route('peserta.index')
+                        ->with('success','Data Peserta berhasil dihapus!');
+                        
     }
 }

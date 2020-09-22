@@ -38,9 +38,9 @@
                                         <div class="col-sm-2">
                                         </div>
                                         <div class="col-sm-10">
-                                            <button class="btn btn-md btn-primary" onclick="">
+                                            <a class="btn btn-md btn-primary" href="{{ route('peserta.create') }}">
                                                 <i class="fa fa-plus"></i> TAMBAH DATA
-                                            </button>
+                                            </a>
                                             <button class="btn btn-md btn-primary" onclick="">
                                                 EKSPORT DATA
                                             </button>
@@ -66,7 +66,7 @@
                             <th scope="col">Level</th>
                             <th scope="col">Status Pembayaran</th>
                             <th scope="col">Semester Masuk</th>
-                            <th scope="col">Userid</th>
+                            <!-- <th scope="col">Userid</th> -->
                             <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -86,7 +86,7 @@
                                     <td>{{ $peserta->level }}</td>
                                     <td>{{ $peserta->status_pembayaran }}</td>
                                     <td>{{ $peserta->semester_masuk }}</td>
-                                    <td>{{ $peserta->userid }}</td>
+                                    <!-- <td>{{ $peserta->userid }}</td> -->
                                     <td>
                                         <form action="{{ route('peserta.destroy',$peserta->id) }}" method="POST">
                                         <a class="btn btn-sm btn-primary" href="{{ route('peserta.edit',$peserta->id) }}">
