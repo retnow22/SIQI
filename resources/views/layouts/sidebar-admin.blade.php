@@ -15,7 +15,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="{{ url('/kelola-jadwal') }}">
+						<a href="{{ route('jadwal.index') }}">
 							<span><i class="fa fa-calendar"></i></span>
 							<span>Kelola Jadwal</span>
 						</a>

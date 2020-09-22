@@ -31,10 +31,10 @@ Route::get('/hasil-studi-peserta', 'HasilStudiPesertaController@index')->name('h
 Route::get('/data-rombel', 'DataRombelController@index')->name('data-rombel');
 Route::get('/laporan-pengajar', 'LaporanPengajarController@index')->name('laporan-pengajar');
 Route::get('/kelola-akun', 'KelolaAkunController@index')->name('kelola-akun');
-Route::get('/kelola-jadwal', 'KelolaJadwalController@index')->name('kelola-jadwal');
 Route::get('/kelola-rombel', 'KelolaRombelController@index')->name('kelola-rombel');
 Route::get('/hadiah-pengajar', 'HadiahPengajarController@index')->name('hadiah-pengajar');
 Route::get('/data-presensi', 'DataPresensiController@index')->name('data-presensi');
 Route::resource('pengajar', 'PengajarController');
 Route::resource('peserta', 'PesertaController');
 Route::resource('nilai', 'NilaiController');
+Route::resource('jadwal', 'JadwalController');

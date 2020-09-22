@@ -5,11 +5,16 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item active" aria-current="page">
-                <span><i class="fa fa-graduation-cap"></i></span>
-				<span>Nilai UAS</span>
+                <span><i class="fa fa-calendar"></i></span>
+				<span>Kelola Jadwal</span>
             </li>
         </ol>
     </nav>
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
+        </div>
+    @endif
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card border-light mb-3">
@@ -52,8 +57,9 @@
                                         <div class="col-sm-2">
                                         </div>
                                         <div class="col-sm-10">
-                                            <button class="btn btn-md btn-primary" onclick="">
-                                                <i class="fa fa-plus"></i> TAMBAH DATA
+                                            <a class="btn btn-md btn-primary" href="{{ route('jadwal.create') }}">
+                                                <i class="fa fa-plus"></i> TAMBAH JADWAL
+                                            </a>                                                
                                             </button>
                                             <button class="btn btn-md btn-primary" onclick="">
                                                 EKSPORT DATA
@@ -64,37 +70,37 @@
                         </div>        
                         </div>
                     </div>
-                    <table class="table table-responsive table-custom table-sm">
+                    <table class="table table-custom table-sm">
                         <thead class="thead-custom">
                             <tr>
                             <th scope="col">No</th>
-                            <th scope="col">NIS</th>
-                            <!-- <th scope="col">Nama Peserta</th> -->
                             <th scope="col">Kode MP</th>
-                            <th scope="col">Nilai Lisan</th>
-                            <th scope="col">Nilai Teori</th>
-                            <th scope="col">Nilai Akhir</th>
-                            <th scope="col">KKM</th>
-                            <th scope="col">Keterangan</th>
-                            <th scope="col">Penguji</th>
+                            <th scope="col">Mata Pelajaran</th>
+                            <th scope="col">Semester</th>
+                            <th scope="col">Hari</th>
+                            <th scope="col">Waktu</th>
+                            <th scope="col">Level</th>
+                            <th scope="col">Kode Pengajar</th>
+                            <!-- <th scope="col">Pengajar</th> -->
+                            <th scope="col">Kuota</th>
                             <th scope="col">Action</th>
                             </tr>
                         </thead>
                             <tbody>
-                            @foreach ($nilai as $key => $nilai)
+                            @foreach ($jadwal as $key => $matpel)
                                 <tr>
                                     <td scope="row">{{ $key + 1 }}</td>
-                                    <td>{{ $nilai->nis }}</td>
-                                    <td>{{ $nilai->kode_matpel }}</td>
-                                    <td>{{ $nilai->nilai_lisan }}</td>
-                                    <td>{{ $nilai->nilai_teori }}</td>
-                                    <td>{{ $nilai->nilai_akhir }}</td>
-                                    <td>{{ $nilai->kkm }}</td>
-                                    <td>{{ $nilai->keterangan }}</td>
-                                    <td>{{ $nilai->penguji }}</td>
+                                    <td>{{ $matpel->kode_matpel }}</td>
+                                    <td>{{ $matpel->nama_matpel }}</td>
+                                    <td>{{ $matpel->semester }}</td>
+                                    <td>{{ $matpel->hari }}</td>
+                                    <td>{{ $matpel->waktu }}</td>
+                                    <td>{{ $matpel->level }}</td>
+                                    <td>{{ $matpel->kode_pengajar }}</td>
+                                    <td>{{ $matpel->kuota }}</td>
                                     <td>
-                                        <form action="{{ route('nilai.destroy',$nilai->id) }}" method="POST">
-                                        <a class="btn btn-sm btn-primary" href="{{ route('nilai.edit',$nilai->id) }}">
+                                        <form action="{{ route('jadwal.destroy',$matpel->id) }}" method="POST">
+                                        <a class="btn btn-sm btn-primary" href="{{ route('jadwal.edit',$matpel->id) }}">
                                             <i class="fa fa-edit"></i>
                                         </a>
 
