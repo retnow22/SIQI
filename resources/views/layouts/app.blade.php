@@ -39,7 +39,7 @@
             <div class="container-fluid">                        
                 <a href="#" class="nav-trigger"><span></span></a>
                 <div class="navbar-header pull-left">
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/home') }}">
                         <img src="storage/logoapp.png" width="45" height="30" class="d-inline-block align-top" alt="">
                         SIAKAD SQI UNJ
                     </a>

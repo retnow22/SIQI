@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <br>
-                <form action="{{ route('peserta.update',$peserta->id) }}" method="POST">
+                <form action="{{ route('peserta.update', $peserta->id) }}" method="POST">
                     @csrf
                     @method('PUT')
                 

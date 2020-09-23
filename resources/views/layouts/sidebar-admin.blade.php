@@ -51,7 +51,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="{{ url('/hadiah-pengajar') }}">
+						<a href="{{ route('kafalah.index') }}">
 							<span><i class="fa fa-envelope"></i></span>
 							<span>Hadiah Pengajar</span>
 						</a>

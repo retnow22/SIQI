@@ -68,9 +68,9 @@
                                         <div class="col-sm-2">
                                         </div>
                                         <div class="col-sm-10">
-                                            <button class="btn btn-md btn-primary" onclick="">
+                                            <a class="btn btn-md btn-primary" href="{{ route('kafalah.create') }}">
                                                 <i class="fa fa-plus"></i> TAMBAH DATA
-                                            </button>
+                                            </a>
                                             <button class="btn btn-md btn-primary" onclick="">
                                                 EKSPORT DATA
                                             </button>
@@ -84,10 +84,9 @@
                         <thead class="thead-custom">
                             <tr>
                             <th scope="col">No</th>
-                            <th scope="col">Id</th>
                             <th scope="col">Semester</th>
                             <th scope="col">NIP</th>
-                            <th scope="col">Nama Pengajar</th>
+                            <!-- <th scope="col">Nama Pengajar</th> -->
                             <th scope="col">Jumlah Mengajar</th>
                             <th scope="col">Nominal</th>
                             <th scope="col">Total Pembayaran</th>                        
@@ -95,96 +94,30 @@
                             </tr>
                         </thead>
                             <tbody>
+                            @foreach ($kafalah as $key => $kafalah)
                                 <tr>
-                                    <td scope="row">1</td>
-                                    <td>0001</td>
-                                    <td>001</td>
-                                    <td>4000000001</td>
-                                    <td>Retno Wulandari</td>
-                                    <td>20</td>
-                                    <td>25.000</td>
-                                    <td>500.000</td>
+                                    <td scope="row">{{ $key + 1 }}</td>
+                                    <td>{{ $kafalah->semester }}</td>
+                                    <td>{{ $kafalah->nip }}</td>
+                                    <td>{{ $kafalah->jumlah_mengajar }}</td>
+                                    <td>{{ $kafalah->nominal }}</td>
+                                    <td>{{ $kafalah->total_pembayaran }}</td>
                                     <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
+                                        <form action="{{ route('kafalah.destroy',$kafalah->id) }}" method="POST">
+                                        <a class="btn btn-sm btn-primary" href="{{ route('kafalah.edit',$kafalah->id) }}">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
+
+                                        @csrf
+                                        @method('DELETE')
+
+                                        <button type="submit" class="btn btn-sm btn-danger">
+                                            <i class="fa fa-eraser"></i>
                                         </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
+                                        </form>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td scope="row">2</td>
-                                    <td>0002</td>
-                                    <td>001</td>
-                                    <td>4000000004</td>
-                                    <td>Ani Sholehah</td>
-                                    <td>10</td>
-                                    <td>25.000</td>
-                                    <td>250.000</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">3</td>
-                                    <td>0003</td>
-                                    <td>001</td>
-                                    <td>2000000005</td>
-                                    <td>Bella Aisyah</td>
-                                    <td>15</td>
-                                    <td>25.000</td>
-                                    <td>375.000</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">4</td>
-                                    <td>0004</td>
-                                    <td>001</td>
-                                    <td>1000000007</td>
-                                    <td>Ira Sumira</td>
-                                    <td>20</td>
-                                    <td>25.000</td>
-                                    <td>500.000</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">5</td>
-                                    <td>0005</td>
-                                    <td>001</td>
-                                    <td>1000000008</td>
-                                    <td>Wulandari</td>
-                                    <td>17</td>
-                                    <td>25.000</td>
-                                    <td>425.000</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
+                            @endforeach
                             </tbody>
                     </table>
                     <br>

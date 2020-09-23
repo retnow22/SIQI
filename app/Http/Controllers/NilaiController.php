@@ -15,6 +15,7 @@ class NilaiController extends Controller
     public function index()
     {
         $nilai = Nilai::all();
+        
         return view('nilai.nilai-uas',['nilai'=> $nilai]);
     }
 
