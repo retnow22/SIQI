@@ -70,9 +70,12 @@ class JadwalController extends Controller
      * @param  \App\Matpel  $matpel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Matpel $matpel)
+    public function edit($id)
     {
-         return view('jadwal.edit-jadwal',compact('matpel'));
+        $matpel = Matpel::find($id);
+
+         return view('jadwal.edit-jadwal')
+             ->with('matpel', $matpel);
     }
 
     /**
@@ -82,8 +85,10 @@ class JadwalController extends Controller
      * @param  \App\Matpel  $matpel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Matpel $matpel)
+    public function update($id, Request $request)
     {
+        $matpel = Matpel::find($id);
+        
         $request->validate([
             'kode_matpel' => 'required',
             'nama_matpel'=> 'required',
@@ -107,8 +112,10 @@ class JadwalController extends Controller
      * @param  \App\Matpel  $matpel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Matpel $matpel)
+    public function destroy($id)
     {
+        $matpel = Matpel::find($id);
+        
         $matpel->delete();
         
         return redirect()->route('jadwal.index')

@@ -76,9 +76,12 @@ class PesertaController extends Controller
      * @param  \App\Peserta  $peserta
      * @return \Illuminate\Http\Response
      */
-    public function edit(Peserta $peserta)
+    public function edit($id)
     {
-        return view('peserta.edit-peserta',compact('peserta'));
+        $peserta = Peserta::find($id);
+
+        return view('peserta.edit-peserta')
+            ->with('peserta', $peserta);
     }
 
     /**
@@ -88,8 +91,10 @@ class PesertaController extends Controller
      * @param  \App\Peserta  $peserta
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Peserta $peserta)
+    public function update($id, Request $request)
     {
+        $peserta = Peserta::find($id);
+
         $request->validate([
             'nis' => 'required',
             'nama_peserta' => 'required',
@@ -118,8 +123,10 @@ class PesertaController extends Controller
      * @param  \App\Peserta  $peserta
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Peserta $peserta)
+    public function destroy($id)
     {
+        $peserta = Peserta::find($id);
+
         $peserta->delete();
         
         return redirect()->route('peserta.index')

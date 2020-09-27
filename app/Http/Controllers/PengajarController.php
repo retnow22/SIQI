@@ -37,6 +37,8 @@ class PengajarController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request->input());
+
         $request->validate([   
             'nip' => 'required',
             'nama_pengajar' => 'required',
@@ -116,6 +118,8 @@ class PengajarController extends Controller
      */
     public function destroy(Pengajar $pengajar)
     {
+        //dd($pengajar);
+        
         $pengajar->delete();
         
         return redirect()->route('pengajar.index')
