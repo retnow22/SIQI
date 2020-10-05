@@ -15,19 +15,19 @@ class CreatePesertaTable extends Migration
     {
         Schema::create('peserta', function (Blueprint $table) {
             $table->id();
-            $table->string('nis');
+            $table->string('nis')->nullable();
             $table->string('nama_peserta');
-            $table->string('prodi');
-            $table->string('fakultas');
-            $table->string('instansi');
-            $table->string('angkatan');
-            $table->string('no_hp');
+            $table->string('prodi')->nullable();
+            $table->string('fakultas')->nullable();
+            $table->string('instansi')->nullable();
+            $table->string('angkatan')->nullable();
+            $table->string('no_hp')->nullable();
             $table->string('email');
-            $table->string('jenis_kelamin');
+            $table->string('jenis_kelamin')->nullable();
             $table->string('level');
-            $table->boolean('status_pembayaran');
-            $table->string('semester_masuk');
-            $table->string('userid');
+            $table->boolean('status_pembayaran')->nullable();
+            $table->string('semester_masuk')->nullable();
+            $table->string('userid')->nullable();
             $table->timestamps();
         });
     }

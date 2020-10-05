@@ -88,16 +88,25 @@
                 </div>
             </div>
         </nav>
+      
+        @php $role = auth()->user()->role @endphp
 
-        @include('layouts/sidebar-admin')
-        <!-- @include('layouts/sidebar-student') -->
-        <!-- @include('layouts/sidebar-teacher') -->
+        @if($role == 0)
+            @include('layouts/sidebar-admin')
+        @elseif( $role == 1)
+            @include('layouts/sidebar-teacher')
+        @elseif( $role == 2)
+            @include('layouts/sidebar-student')
+        @endif
 
         <div class="main-content">
 			<div class="main-content-inner">
                 @yield('content')
             </div>
 		</div>
+
+
+
     </div>
 </body>
 </html>

@@ -69,6 +69,19 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
+
+                            <div class="col-md-6">
+                                <!-- <input id="role" type="text" class="form-control" name="role" required > -->
+                                <select id="role" class="custom-select" name="role" required>
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">Pengajar</option>
+                                    <option value="2">Peserta</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Models\Pengajar;
+use App\Models\Peserta;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -64,19 +66,41 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        dd($data);
-
-        Pengajar::create([
-            'level' => $data['level_tahsin'],
-            'nama_pengajar' => $data['name'],
-            'email' => $data['email'],
         
-        ]);
 
-        return User::create([
+        $user=User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'role' => $data['role'],
         ]);
+
+        // dd($user->getAttribute('id'));
+        if($data['role'] == '1'){
+            Pengajar::create([
+                'level' => $data['level_tahsin'],
+                'nama_pengajar' => $data['name'],
+                'email' => $data['email'],
+                'userid' => $user->getAttribute('id'),
+            
+            ]);
+
+        }
+        else if($data['role'] == '2'){
+            Peserta::create([
+                'level' => $data['level_tahsin'],
+                'nama_peserta' => $data['name'],
+                'email' => $data['email'],
+                'userid' => $user->getAttribute('id'),
+            
+            ]); 
+        }
+
+        
+
+        // dd($pengajar);
+
+        return $user;
+
     }
 }

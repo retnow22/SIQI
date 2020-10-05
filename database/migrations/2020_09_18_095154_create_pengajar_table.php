@@ -15,18 +15,19 @@ class CreatePengajarTable extends Migration
     {
         Schema::create('pengajar', function (Blueprint $table) {
             $table->id();
-            $table->string('nip');
+            $table->string('nip')->nullable();
             $table->string('nama_pengajar');
-            $table->string('prodi');
-            $table->string('fakultas');
-            $table->string('instansi');
-            $table->string('no_hp');
+            $table->string('prodi')->nullable();
+            $table->string('fakultas')->nullable();
+            $table->string('instansi')->nullable();
+            $table->string('no_hp')->nullable();
             $table->string('email');
-            $table->string('jenis_kelamin');
+            $table->string('jenis_kelamin')->nullable();
             $table->string('level');
-            $table->string('kode_pengajar');
-            $table->string('userid');
+            $table->string('kode_pengajar')->nullable();
+            $table->integer('userid')->nullable();
             $table->timestamps();
+        
         });
     }
 

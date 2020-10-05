@@ -18,6 +18,7 @@ class Pengajar extends Model
         'email',
         'jenis_kelamin',
         'level',
-        'kode_pengajar'
+        'kode_pengajar',
+        'userid'
     ];
 }
