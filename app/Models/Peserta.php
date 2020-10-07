@@ -19,7 +19,6 @@ class Peserta extends Model
         'email',
         'jenis_kelamin',
         'level',
-        'status_pembayaran',
         'semester_masuk',
         'userid'
 

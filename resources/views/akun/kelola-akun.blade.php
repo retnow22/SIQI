@@ -38,9 +38,9 @@
                                         <div class="col-sm-2">
                                         </div>
                                         <div class="col-sm-10">
-                                            <button class="btn btn-md btn-primary" onclick="">
+                                            <a class="btn btn-md btn-primary" href="{{ route('akun.create') }}">
                                                 <i class="fa fa-plus"></i> TAMBAH AKUN
-                                            </button>
+                                            </a>
                                             <button class="btn btn-md btn-primary" onclick="">
                                                 EKSPORT DATA
                                             </button>
@@ -55,82 +55,36 @@
                             <tr>
                             <th scope="col">No</th>
                             <th scope="col">Username</th>
+                            <th scope="col">Email</th>
                             <th scope="col">Password</th>
                             <th scope="col">Role</th>
                             <th scope="col">Action</th>
                             </tr>
                         </thead>
                             <tbody>
+                            @foreach ($akun as $key => $akun)
                                 <tr>
-                                    <td scope="row">1</td>
-                                    <td>admin1</td>
-                                    <td>admin1</td>
-                                    <td>admin</td>
+                                    <td scope="row">{{ $key + 1 }}</td>
+                                    <td>{{ $akun->name }}</td>
+                                    <td>{{ $akun->email }}</td>
+                                    <td>{{ $akun->password }}</td>
+                                    <td>{{ $akun->role }}</td>
                                     <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
+                                        <form action="{{ route('akun.destroy',$akun->id) }}" method="POST">
+                                        <a class="btn btn-sm btn-primary" href="{{ route('akun.edit',$akun->id) }}">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
+
+                                        @csrf
+                                        @method('DELETE')
+
+                                        <button type="submit" class="btn btn-sm btn-danger">
+                                            <i class="fa fa-eraser"></i>
                                         </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
+                                        </form>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td scope="row">2</td>
-                                    <td>admin2</td>
-                                    <td>admin2</td>
-                                    <td>admin</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">3</td>
-                                    <td>retno41</td>
-                                    <td>retno41</td>
-                                    <td>teacher</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">4</td>
-                                    <td>wulan21</td>
-                                    <td>wulan21</td>
-                                    <td>student</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">5</td>
-                                    <td>zahra42</td>
-                                    <td>zahra42</td>
-                                    <td>teacher</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-edit"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-primary" onclick="">
-                        				<i class="fa fa-eraser"></i>
-                                        </button>
-                                    </td>
-                                </tr>
+                            @endforeach
                             </tbody>
                     </table>
                     <br>

@@ -8,7 +8,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="{{ url('/kelola-akun') }}">
+						<a href="{{ route('akun.index') }}">
 
 							<span><i class="fa fa-user-circle-o"></i></span>
 							<span>Kelola Akun</span>

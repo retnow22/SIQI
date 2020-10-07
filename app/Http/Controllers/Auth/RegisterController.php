@@ -76,20 +76,32 @@ class RegisterController extends Controller
         ]);
 
         // dd($user->getAttribute('id'));
-        if($data['role'] == '1'){
+        if($data['role'] == 'Pengajar'){
             Pengajar::create([
-                'level' => $data['level_tahsin'],
                 'nama_pengajar' => $data['name'],
+                'prodi' => $data['prodi'],
+                'fakultas' => $data['fakultas'],
+                'instansi' => $data['instansi'],
+                'angkatan' => $data['angkatan'],
+                'no_hp' => $data['no_hp'],
+                'jenis_kelamin' => $data['jenis_kelamin'],
+                'level' => $data['level'],
                 'email' => $data['email'],
                 'userid' => $user->getAttribute('id'),
             
             ]);
 
         }
-        else if($data['role'] == '2'){
+        else if($data['role'] == 'Peserta'){
             Peserta::create([
-                'level' => $data['level_tahsin'],
                 'nama_peserta' => $data['name'],
+                'prodi' => $data['prodi'],
+                'fakultas' => $data['fakultas'],
+                'instansi' => $data['instansi'],
+                'angkatan' => $data['angkatan'],
+                'no_hp' => $data['no_hp'],
+                'jenis_kelamin' => $data['jenis_kelamin'],
+                'level' => $data['level'],
                 'email' => $data['email'],
                 'userid' => $user->getAttribute('id'),
             

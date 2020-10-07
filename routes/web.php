@@ -40,3 +40,4 @@ Route::resource('jadwal', 'JadwalController');
 Route::resource('kafalah', 'KafalahController');
 Route::resource('regis-peserta', 'RegisPesertaController');
 Route::resource('regis-pengajar', 'RegisPengajarController');
+Route::resource('akun', 'AkunController');

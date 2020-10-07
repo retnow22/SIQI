@@ -14,6 +14,7 @@ class Pengajar extends Model
         'prodi',
         'fakultas',
         'instansi',
+        'angkatan',
         'no_hp',
         'email',
         'jenis_kelamin',
