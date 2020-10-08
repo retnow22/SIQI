@@ -18,10 +18,10 @@ class CreateNilaiTable extends Migration
             $table->string('nis');
             $table->string('kode_matpel');
             $table->integer('nilai_lisan');
-            $table->integer('nilai_teori');
+            $table->integer('nilai_teori')->nullable();
             $table->integer('nilai_akhir');
             $table->integer('kkm');
-            $table->boolean('keterangan');
+            $table->string('keterangan');
             $table->string('penguji');
             $table->timestamps();
         });

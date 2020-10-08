@@ -68,7 +68,15 @@
                             <div class="row">
                                 <label for="level" class="col-3 col-form-label text-right"><strong>Level :</strong></label>
                                 <div class="col-9">
-                                <input type="text" name="level" value="{{ $matpel->level }}" class="form-control" placeholder="">
+                                    <select id="level" class="custom-select" name="level" value="{{ $matpel->level }}" required>
+                                        <option selected>{{ $matpel->level }}</option>
+                                        <option value="1">Pra Tahsin 1</option>
+                                        <option value="2">Pra Tahsin 2</option>
+                                        <option value="3">Tahsin 1</option>
+                                        <option value="4">Tahsin 2</option>
+                                        <option value="5">Tahsin 3</option>
+                                        <option value="6">Tahsin 4</option>
+                                    </select>
                                 </div>
                             </div>
                             <br>
@@ -88,7 +96,7 @@
                             <br>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Simpan</button>
                         </div>
                     </div>
                 

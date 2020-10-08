@@ -75,7 +75,6 @@ class RegisterController extends Controller
             'role' => $data['role'],
         ]);
 
-        // dd($user->getAttribute('id'));
         if($data['role'] == 'Pengajar'){
             Pengajar::create([
                 'nama_pengajar' => $data['name'],
@@ -107,10 +106,6 @@ class RegisterController extends Controller
             
             ]); 
         }
-
-        
-
-        // dd($pengajar);
 
         return $user;
 

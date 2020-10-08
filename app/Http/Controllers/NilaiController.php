@@ -41,7 +41,7 @@ class NilaiController extends Controller
             'nis' => 'required',
             'kode_matpel' => 'required',
             'nilai_lisan' => 'required',
-            // 'nilai_teori' => 'required',
+            'nilai_teori' => 'required',
             'nilai_akhir' => 'required',
             'kkm' => 'required',
             'keterangan' => 'required',
@@ -72,9 +72,12 @@ class NilaiController extends Controller
      * @param  \App\Nilai  $nilai
      * @return \Illuminate\Http\Response
      */
-    public function edit(Nilai $nilai)
+    public function edit($id)
     {
-        return view('nilai.edit-nilai',compact('nilai'));
+        $nilai = Nilai::find($id);
+
+        return view('nilai.edit-nilai')
+            ->with('nilai', $nilai);
     }
 
     /**
@@ -84,8 +87,10 @@ class NilaiController extends Controller
      * @param  \App\Nilai  $nilai
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Nilai $nilai)
+    public function update($id, Request $request)
     {
+        $nilai = Nilai::find($id);
+
         $request->validate([
             'nis' => 'required',
             'kode_matpel' => 'required',
@@ -109,8 +114,10 @@ class NilaiController extends Controller
      * @param  \App\Nilai  $nilai
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Nilai $nilai)
+    public function destroy($id)
     {
+        $nilai = Nilai::find($id);
+        
         $nilai->delete();
         
         return redirect()->route('nilai.index')

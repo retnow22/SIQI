@@ -43,7 +43,6 @@ class JadwalController extends Controller
             'hari'=> 'required',
             'waktu'=> 'required',
             'level'=> 'required',
-            'kode_pengajar'=> 'required',
             'kuota' => 'required',
         ]);
   
@@ -96,7 +95,6 @@ class JadwalController extends Controller
             'hari'=> 'required',
             'waktu'=> 'required',
             'level'=> 'required',
-            'kode_pengajar'=> 'required',
             'kuota' => 'required',
         ]);
   

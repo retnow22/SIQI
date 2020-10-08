@@ -64,9 +64,8 @@
                             <th scope="col">Email</th>
                             <th scope="col">Jenis Kelamin</th>
                             <th scope="col">Level</th>
-                            <th scope="col">Status Pembayaran</th>
                             <th scope="col">Semester Masuk</th>
-                            <!-- <th scope="col">Userid</th> -->
+                            <th scope="col">Userid</th>
                             <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -84,9 +83,8 @@
                                     <td>{{ $peserta->email }}</td>
                                     <td>{{ $peserta->jenis_kelamin }}</td>
                                     <td>{{ $peserta->level }}</td>
-                                    <td>{{ $peserta->status_pembayaran }}</td>
                                     <td>{{ $peserta->semester_masuk }}</td>
-                                    <!-- <td>{{ $peserta->userid }}</td> -->
+                                    <td>{{ $peserta->userid }}</td>
                                     <td>
                                         <form action="{{ route('peserta.destroy',$peserta->id) }}" method="POST">
                                         <a class="btn btn-sm btn-primary" href="{{ route('peserta.edit',$peserta->id) }}">

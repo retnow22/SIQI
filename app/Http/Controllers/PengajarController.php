@@ -15,7 +15,7 @@ class PengajarController extends Controller
     public function index()
     {
         $pengajar = Pengajar::all();
-        // dd($pengajar);
+
         return view('pengajar.data-pengajar',['pengajar'=> $pengajar]);
     }
 
@@ -37,14 +37,13 @@ class PengajarController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->input());
-
         $request->validate([   
             'nip' => 'required',
             'nama_pengajar' => 'required',
             'prodi' => 'required',
             'fakultas' => 'required',
             'instansi' => 'required',
+            'angkatan' => 'required',
             'no_hp' => 'required',
             'email' => 'required',
             'jenis_kelamin' => 'required',
@@ -76,9 +75,12 @@ class PengajarController extends Controller
      * @param  \App\Pengajar  $pengajar
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pengajar $pengajar)
+    public function edit($id)
     {
-        return view('pengajar.edit-pengajar',compact('pengajar'));
+        $pengajar = Pengajar::find($id);
+
+        return view('pengajar.edit-pengajar')
+            ->with('pengajar', $pengajar);
     }
 
     /**
@@ -88,14 +90,17 @@ class PengajarController extends Controller
      * @param  \App\Pengajar  $pengajar
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pengajar $pengajar)
+    public function update($id, Request $request)
     {
+        $pengajar = Pengajar::find($id);
+
         $request->validate([
             'nip' => 'required',
             'nama_pengajar' => 'required',
             'prodi' => 'required',
             'fakultas' => 'required',
             'instansi' => 'required',
+            'angkatan' => 'required',
             'no_hp' => 'required',
             'email' => 'required',
             'jenis_kelamin' => 'required',
@@ -116,9 +121,9 @@ class PengajarController extends Controller
      * @param  \App\Pengajar  $pengajar
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pengajar $pengajar)
+    public function destroy($id)
     {
-        //dd($pengajar);
+        $pengajar = Pengajar::find($id);
         
         $pengajar->delete();
         

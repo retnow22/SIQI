@@ -15,6 +15,7 @@ class PesertaController extends Controller
     public function index()
     {
         $peserta = Peserta::all();
+
         return view('peserta.data-peserta',['peserta'=> $peserta]);
 
     }
@@ -48,7 +49,6 @@ class PesertaController extends Controller
             'email' => 'required',
             'jenis_kelamin' => 'required',
             'level' => 'required',
-            'status_pembayaran' => 'required',
             'semester_masuk' => 'required',    
         ]);
   
@@ -106,7 +106,6 @@ class PesertaController extends Controller
             'email' => 'required',
             'jenis_kelamin' => 'required',
             'level' => 'required',
-            'status_pembayaran' => 'required',
             'semester_masuk' => 'required',
         ]);
   

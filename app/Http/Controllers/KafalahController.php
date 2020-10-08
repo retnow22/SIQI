@@ -69,9 +69,12 @@ class KafalahController extends Controller
      * @param  \App\Kafalah  $kafalah
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kafalah $kafalah)
+    public function edit($id)
     {
-        return view('kafalah.edit-kafalah',compact('kafalah'));
+        $kafalah = Kafalah::find($id);
+
+        return view('kafalah.edit-kafalah')
+            ->with('kafalah', $kafalah);
     }
 
     /**
@@ -81,8 +84,10 @@ class KafalahController extends Controller
      * @param  \App\Kafalah  $kafalah
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Kafalah $kafalah)
+    public function update($id, Request $request)
     {
+        $kafalah = Kafalah::find($id);
+
         $request->validate([
             'semester' => 'required',
             'nip' => 'required',
@@ -103,8 +108,10 @@ class KafalahController extends Controller
      * @param  \App\Kafalah  $kafalah
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kafalah $kafalah)
+    public function destroy($id)
     {
+        $kafalah = Kafalah::find($id);
+        
         $kafalah->delete();
         
         return redirect()->route('kafalah.index')

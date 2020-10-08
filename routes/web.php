@@ -30,7 +30,6 @@ Route::get('/jadwal-mengajar', 'JadwalMengajarController@index')->name('jadwal-m
 Route::get('/hasil-studi-peserta', 'HasilStudiPesertaController@index')->name('hasil-studi-peserta');
 Route::get('/data-rombel', 'DataRombelController@index')->name('data-rombel');
 Route::get('/laporan-pengajar', 'LaporanPengajarController@index')->name('laporan-pengajar');
-Route::get('/kelola-akun', 'KelolaAkunController@index')->name('kelola-akun');
 Route::get('/kelola-rombel', 'KelolaRombelController@index')->name('kelola-rombel');
 Route::get('/data-presensi', 'DataPresensiController@index')->name('data-presensi');
 Route::resource('pengajar', 'PengajarController');
@@ -38,6 +37,4 @@ Route::resource('peserta', 'PesertaController');
 Route::resource('nilai', 'NilaiController');
 Route::resource('jadwal', 'JadwalController');
 Route::resource('kafalah', 'KafalahController');
-Route::resource('regis-peserta', 'RegisPesertaController');
-Route::resource('regis-pengajar', 'RegisPengajarController');
 Route::resource('akun', 'AkunController');

@@ -21,8 +21,8 @@ class CreateMatpelTable extends Migration
             $table->string('hari');
             $table->string('waktu');
             $table->string('level');
-            $table->string('kode_pengajar');
-            $table->string('nis');
+            $table->string('kode_pengajar')->nullable();
+            $table->string('nis')->nullable();
             $table->integer('kuota');
             $table->timestamps();
         });

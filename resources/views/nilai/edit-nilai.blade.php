@@ -75,16 +75,12 @@
                             <div class="row">
                                 <label for="keterangan" class="col-3 col-form-label text-right"><strong>Keterangan :</strong></label>
                                 <div class="col-9">
-                                <input type="text" name="keterangan" value="{{ $nilai->keterangan }}" class="form-control" placeholder="">
+                                    <select id="keterangan" class="custom-select" name="keterangan" required>
+                                        <option selected>{{ $nilai->keterangan }}</option>
+                                        <option value="Lulus">Lulus</option>
+                                        <option value="Belum Lulus">Belum Lulus</option>
+                                    </select>
                                 </div>
-                                <!-- <label for="keterangan" class="col-3 col-form-label text-right"><strong>Keterangan :</strong></label>
-                                <div class="col-9">
-                                <select class="custom-select" value="{{ $nilai->keterangan }}">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">Lulus</option>
-                                    <option value="2">Belum Lulus</option>
-                                </select>
-                                </div> -->
                             </div>
                             <br>
                             <div class="row">
@@ -96,7 +92,7 @@
                             <br>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Simpan</button>
                         </div>
                     </div>
                 

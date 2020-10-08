@@ -54,14 +54,36 @@
                             <div class="row">
                                 <label for="fakultas" class="col-3 col-form-label text-right"><strong>Fakultas :</strong></label>
                                 <div class="col-9">
-                                <input type="text" name="fakultas" value="{{ $pengajar->fakultas }}" class="form-control" placeholder="">
+                                    <select id="fakultas" class="custom-select" name="fakultas" required>
+                                        <option selected>{{ $pengajar->fakultas }}</option>
+                                        <option value="FIP">FIP</option>
+                                        <option value="FT">FT</option>
+                                        <option value="FMIPA">FMIPA</option>
+                                        <option value="FE">FE</option>
+                                        <option value="FBS">FBS</option>
+                                        <option value="FIS">FIS</option>
+                                        <option value="FIK">FIK</option>
+                                        <option value="FPPsi">FPPsi</option>
+                                        <option value="Umum">Umum</option>
+                                    </select>
                                 </div>
                             </div>
                             <br>
                             <div class="row">
                                 <label for="instansi" class="col-3 col-form-label text-right"><strong>Instansi :</strong></label>
                                 <div class="col-9">
-                                <input type="text" name="instansi" value="{{ $pengajar->instansi }}" class="form-control" placeholder="">
+                                    <select id="instansi" class="custom-select" name="instansi" required>
+                                        <option selected>{{ $pengajar->instansi }}</option>
+                                        <option value="UNJ">UNJ</option>
+                                        <option value="Umum">Umum</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <label for="angkatan" class="col-3 col-form-label text-right"><strong>Angkatan :</strong></label>
+                                <div class="col-9">
+                                <input type="text" name="angkatan" value="{{ $pengajar->angkatan }}" class="form-control" placeholder="">
                                 </div>
                             </div>
                             <br>
@@ -77,27 +99,31 @@
                                 <div class="col-9">
                                 <input type="text" name="email" value="{{ $pengajar->email }}" class="form-control" placeholder="">
                                 </div>
-                                <!-- <label for="keterangan" class="col-3 col-form-label text-right"><strong>Keterangan :</strong></label>
-                                <div class="col-9">
-                                <select class="custom-select">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">Lulus</option>
-                                    <option value="2">Belum Lulus</option>
-                                </select>
-                                </div> -->
                             </div>
                             <br>
                             <div class="row">
                                 <label for="jenis_kelamin" class="col-3 col-form-label text-right"><strong>Jenis Kelamin :</strong></label>
                                 <div class="col-9">
-                                <input type="text" name="jenis_kelamin" value="{{ $pengajar->jenis_kelamin }}" class="form-control" placeholder="">
+                                    <select id="jenis_kelamin" class="custom-select" name="jenis_kelamin" required>
+                                        <option selected>{{ $pengajar->jenis_kelamin }}</option>
+                                        <option value="Laki-laki">Laki-laki</option>
+                                        <option value="Perempuan">Perempuan</option>
+                                    </select>
                                 </div>
                             </div>
                             <br>
                             <div class="row">
                                 <label for="level" class="col-3 col-form-label text-right"><strong>Level :</strong></label>
                                 <div class="col-9">
-                                <input type="text" name="level" value="{{ $pengajar->level }}" class="form-control" placeholder="">
+                                    <select id="level" class="custom-select" name="level" required>
+                                        <option selected>{{ $pengajar->level }}</option>
+                                        <option value="1">Pra Tahsin 1</option>
+                                        <option value="2">Pra Tahsin 2</option>
+                                        <option value="3">Tahsin 1</option>
+                                        <option value="4">Tahsin 2</option>
+                                        <option value="5">Tahsin 3</option>
+                                        <option value="6">Tahsin 4</option>
+                                    </select>
                                 </div>
                             </div>
                             <br>
@@ -108,9 +134,16 @@
                                 </div>
                             </div>
                             <br>
+                            <div class="row">
+                                <label for="userid" class="col-3 col-form-label text-right"><strong>Userid :</strong></label>
+                                <div class="col-9">
+                                <input type="text" name="userid" value="{{ $pengajar->userid }}" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <br>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Simpan</button>
                         </div>
                     </div>
                 

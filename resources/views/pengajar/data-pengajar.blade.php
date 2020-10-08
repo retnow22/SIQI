@@ -59,12 +59,13 @@
                             <th scope="col">Prodi</th>
                             <th scope="col">Fakultas</th>
                             <th scope="col">Instansi</th>
+                            <th scope="col">Angkatan</th>
                             <th scope="col">No Hp</th>
                             <th scope="col">Email</th>
                             <th scope="col">Jenis Kelamin</th>
                             <th scope="col">Level</th>
                             <th scope="col">Kode Pengajar</th>
-                            <!-- <th scope="col">Userid</th> -->
+                            <th scope="col">Userid</th>
                             <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -77,12 +78,13 @@
                                     <td>{{ $pengajar->prodi }}</td>
                                     <td>{{ $pengajar->fakultas }}</td>
                                     <td>{{ $pengajar->instansi }}</td>
+                                    <td>{{ $pengajar->angkatan }}</td>
                                     <td>{{ $pengajar->no_hp }}</td>
                                     <td>{{ $pengajar->email }}</td>
                                     <td>{{ $pengajar->jenis_kelamin }}</td>
                                     <td>{{ $pengajar->level }}</td>
                                     <td>{{ $pengajar->kode_pengajar }}</td>
-                                    <!-- <td>{{ $pengajar->userid }}</td> -->
+                                    <td>{{ $pengajar->userid }}</td>
                                     <td>
                                         <form action="{{ route('pengajar.destroy',$pengajar->id) }}" method="POST">
                                         <a class="btn btn-sm btn-primary" href="{{ route('pengajar.edit',$pengajar->id) }}">

@@ -54,7 +54,12 @@
                             <div class="row">
                                 <label for="role" class="col-3 col-form-label text-right"><strong>Role :</strong></label>
                                 <div class="col-9">
-                                <input type="text" name="role" value="{{ $akun->role }}" class="form-control" placeholder="">
+                                    <select id="role" class="custom-select" name="role" required>
+                                        <option selected>{{ $akun->role }}</option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="Pengajar">Pengajar</option>
+                                        <option value="Peserta">Peserta</option>
+                                    </select>
                                 </div>
                             </div>                           
                             <br>
