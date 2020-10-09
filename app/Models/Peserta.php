@@ -20,7 +20,7 @@ class Peserta extends Model
         'jenis_kelamin',
         'level',
         'semester_masuk',
-        'userid'
+        'user_id'
 
     ];
 

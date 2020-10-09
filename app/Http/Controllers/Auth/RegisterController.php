@@ -86,7 +86,7 @@ class RegisterController extends Controller
                 'jenis_kelamin' => $data['jenis_kelamin'],
                 'level' => $data['level'],
                 'email' => $data['email'],
-                'userid' => $user->getAttribute('id'),
+                'user_id' => $user->getAttribute('id'),
             
             ]);
 
@@ -102,7 +102,7 @@ class RegisterController extends Controller
                 'jenis_kelamin' => $data['jenis_kelamin'],
                 'level' => $data['level'],
                 'email' => $data['email'],
-                'userid' => $user->getAttribute('id'),
+                'user_id' => $user->getAttribute('id'),
             
             ]); 
         }

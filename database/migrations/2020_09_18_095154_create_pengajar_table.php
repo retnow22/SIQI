@@ -26,7 +26,7 @@ class CreatePengajarTable extends Migration
             $table->string('jenis_kelamin');
             $table->string('level');
             $table->string('kode_pengajar')->nullable();
-            $table->integer('userid')->nullable();
+            $table->integer('user_id')->nullable();
             $table->timestamps();
         
         });

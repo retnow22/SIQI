@@ -134,7 +134,7 @@
                             </div>
                             <br>
                             <div class="row">
-                                <label for="userid" class="col-3 col-form-label text-right"><strong>Userid :</strong></label>
+                                <label for="userid" class="col-3 col-form-label text-right"><strong>User Id :</strong></label>
                                 <div class="col-9">
                                 <input type="text" name="userid" class="form-control" placeholder="">
                                 </div>

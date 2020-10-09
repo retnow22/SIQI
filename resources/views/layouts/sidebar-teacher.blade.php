@@ -8,7 +8,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="{{ url('/profil-pengajar') }}">
+						<a href="{{ route('pengajar.profil') }}">
 							<span><i class="fa fa-user-circle-o"></i></span>
 							<span>Profil</span>
 						</a>

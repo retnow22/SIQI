@@ -20,6 +20,11 @@ class Pengajar extends Model
         'jenis_kelamin',
         'level',
         'kode_pengajar',
-        'userid'
+        'user_id'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

@@ -26,7 +26,7 @@ class CreatePesertaTable extends Migration
             $table->string('jenis_kelamin');
             $table->string('level');
             $table->string('semester_masuk')->nullable();
-            $table->string('userid')->nullable();
+            $table->string('user_id')->nullable();
             $table->timestamps();
         });
     }

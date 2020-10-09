@@ -20,7 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/profil', 'ProfilController@index')->name('profil');
 Route::get('/hasil-studi', 'HasilStudiController@index')->name('hasil-studi');
 Route::get('/rencana-studi', 'RencanaStudiController@index')->name('rencana-studi');
 Route::get('/presensi-peserta', 'PresensiPesertaController@index')->name('presensi-peserta');
@@ -32,9 +31,12 @@ Route::get('/data-rombel', 'DataRombelController@index')->name('data-rombel');
 Route::get('/laporan-pengajar', 'LaporanPengajarController@index')->name('laporan-pengajar');
 Route::get('/kelola-rombel', 'KelolaRombelController@index')->name('kelola-rombel');
 Route::get('/data-presensi', 'DataPresensiController@index')->name('data-presensi');
+Route::get('/profil-pengajar', 'ProfilPengajarController@profil')->name('pengajar.profil');
 Route::resource('pengajar', 'PengajarController');
 Route::resource('peserta', 'PesertaController');
 Route::resource('nilai', 'NilaiController');
 Route::resource('jadwal', 'JadwalController');
 Route::resource('kafalah', 'KafalahController');
 Route::resource('akun', 'AkunController');
+Route::put('/profil-pengajar/{id}', 'ProfilPengajarController@update')->name('pengajar.updateprofil');
+Route::patch('/profil-pengajar/{id}', 'ProfilPengajarController@update')->name('pengajar.updateprofil');

@@ -137,7 +137,7 @@
                             <div class="row">
                                 <label for="userid" class="col-3 col-form-label text-right"><strong>Userid :</strong></label>
                                 <div class="col-9">
-                                <input type="text" name="userid" value="{{ $peserta->userid }}" class="form-control" placeholder="">
+                                <input type="text" name="userid" value="{{ $peserta->users_id }}" class="form-control" placeholder="">
                                 </div>
                             </div>
                             <br>

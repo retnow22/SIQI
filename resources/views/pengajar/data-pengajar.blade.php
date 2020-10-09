@@ -65,7 +65,7 @@
                             <th scope="col">Jenis Kelamin</th>
                             <th scope="col">Level</th>
                             <th scope="col">Kode Pengajar</th>
-                            <th scope="col">Userid</th>
+                            <th scope="col">User Id</th>
                             <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -84,7 +84,7 @@
                                     <td>{{ $pengajar->jenis_kelamin }}</td>
                                     <td>{{ $pengajar->level }}</td>
                                     <td>{{ $pengajar->kode_pengajar }}</td>
-                                    <td>{{ $pengajar->userid }}</td>
+                                    <td>{{ $pengajar->users_id }}</td>
                                     <td>
                                         <form action="{{ route('pengajar.destroy',$pengajar->id) }}" method="POST">
                                         <a class="btn btn-sm btn-primary" href="{{ route('pengajar.edit',$pengajar->id) }}">
