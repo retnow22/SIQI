@@ -42,4 +42,9 @@ class User extends Authenticatable
         return $this->hasOne('App\Models\Pengajar');
     }
 
+    public function peserta()
+    {
+        return $this->hasOne('App\Models\Peserta');
+    }
+
 }

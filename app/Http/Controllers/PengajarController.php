@@ -131,4 +131,31 @@ class PengajarController extends Controller
                         ->with('success','Data Pengajar berhasil dihapus!');
 
     }
+
+    public function profil()
+    {
+        $profil = Pengajar::all();
+
+        return view('pengajar.profil', ['profil'=>$profil]);
+    }
+
+    public function updateprofil($id, Request $request)
+    {
+        $pengajar = Pengajar::find($id);
+
+        $request->validate([
+            'nama_pengajar' => 'required',
+            'prodi' => 'required',
+            'fakultas' => 'required',
+            'instansi' => 'required',
+            'no_hp' => 'required',
+        ]);
+  
+        $pengajar->update($request->all());
+  
+        return redirect()->route('pengajar.profil')
+                        ->with('success','Biodata berhasil diperbarui!');
+
+    }
+
 }

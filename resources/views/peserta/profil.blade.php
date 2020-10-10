@@ -20,11 +20,26 @@
                             <div class="col-md-6">
                             <div class="row">
                                 <dt class="col-sm-4 text-right">Nomor Induk :</dt>
-                                <dd class="col-sm-8">0000000001</dd>
+                                <dd class="col-sm-8">{{auth()->user()->peserta->nis}}</dd>
                                 <dt class="col-sm-4 text-right">Level :</dt>
-                                <dd class="col-sm-8">Tahsin 4</dd>
+                                <dd class="col-sm-8">
+                                    @php $level = auth()->user()->peserta->level @endphp
+                                    @if ($level == 1)
+                                        Pra Tahsin 1
+                                    @elseif($level == 2)
+                                        Pra Tahsin 2
+                                    @elseif($level == 3)
+                                        Tahsin 1
+                                    @elseif($level == 4)
+                                        Tahsin 2
+                                    @elseif($level == 5)
+                                        Tahsin 3
+                                    @elseif($level == 6)
+                                        Tahsin 4
+                                    @endif
+                                </dd>
                                 <dt class="col-sm-4 text-right">Semester Masuk :</dt>
-                                <dd class="col-sm-8">001</dd>
+                                <dd class="col-sm-8">{{auth()->user()->peserta->semester_masuk}}</dd>
                             </div>
                             </div>
                         </dl>
@@ -39,75 +54,71 @@
                 <div class="card-header text-primary">Biodata Peserta</div>
 
                 <div class="card-body">
-                <form>
+                <form action="{{ route('peserta.updateprofil', auth()->user()->peserta->id) }}" method="POST">
+                @csrf
+                @method('PUT')
+
                     <div class="form-group row">
-                        <label for="name" class="col-sm-2 col-form-label">Nama</label>
+                        <label for="nama_peserta" class="col-sm-2 col-form-label">Nama</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder="">
+                        <input type="text" name="nama_peserta" value="{{ auth()->user()->peserta->nama_peserta }}" class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputInstansi" class="col-sm-2 col-form-label">Instansi</label>
+                        <label for="instansi" class="col-sm-2 col-form-label">Instansi</label>
                         <div class="col-sm-10">
-                        <select class="custom-select">
-                            <option selected>Open this select menu</option>
-                            <option value="1">UNJ</option>
-                            <option value="2">Other</option>
-                        </select>
+                            <select id="instansi" class="custom-select" name="instansi" required>
+                                <option selected>{{ auth()->user()->peserta->instansi }}</option>
+                                <option value="UNJ">UNJ</option>
+                                <option value="Umum">Umum</option>
+                            </select>
                     </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputFakultas" class="col-sm-2 col-form-label">Fakultas</label>
+                        <label for="fakultas" class="col-sm-2 col-form-label">Fakultas</label>
                         <div class="col-sm-10">
-                        <select class="custom-select">
-                            <option selected>Open this select menu</option>
-                            <option value="1">Fmipa</option>
-                            <option value="2">FIP</option>
-                            <option value="3">FIS</option>
-                            <option value="4">FT</option>
-                            <option value="5">FBS</option>
-                            <option value="6">FE</option>
-                            <option value="7">FPPsi</option>
-                            <option value="8">FIK</option>
-                            <option value="9">Other</option>
-                        </select>
+                            <select id="fakultas" class="custom-select" name="fakultas" required>
+                                <option selected>{{ auth()->user()->peserta->fakultas }}</option>
+                                <option value="FIP">FIP</option>
+                                <option value="FT">FT</option>
+                                <option value="FMIPA">FMIPA</option>
+                                <option value="FE">FE</option>
+                                <option value="FBS">FBS</option>
+                                <option value="FIS">FIS</option>
+                                <option value="FIK">FIK</option>
+                                <option value="FPPsi">FPPsi</option>
+                                <option value="Umum">Umum</option>
+                            </select>
                     </div>
                     </div>
                     <div class="form-group row">
-                        <label for="name" class="col-sm-2 col-form-label">Prodi</label>
+                        <label for="prodi" class="col-sm-2 col-form-label">Prodi</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder="">
+                        <input type="text" name="prodi" value="{{ auth()->user()->peserta->prodi }}" class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="name" class="col-sm-2 col-form-label">Angkatan</label>
+                        <label for="angkatan" class="col-sm-2 col-form-label">Angkatan</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder="">
+                        <input type="text" name="angkatan" value="{{ auth()->user()->peserta->angkatan }}" class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="phoneNumber" class="col-sm-2 col-form-label">No Hp</label>
+                        <label for="no_hp" class="col-sm-2 col-form-label">No Hp</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder="">
+                        <input type="text" name="no_hp" value="{{ auth()->user()->peserta->no_hp }}" class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                        <label for="email" class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3" placeholder="">
+                        <input type="text" name="email" value="{{ auth()->user()->peserta->email }}" class="form-control" placeholder="" readonly> 
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="col-sm-2">Jenis Kelamin</div>
+                        <label for="jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                         <div class="col-sm-10">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio1">Laki-laki</label>
-                            </div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio2">Perempuan</label>
-                            </div>
+                        <input type="text" name="jenis_kelamin" value="{{ auth()->user()->peserta->jenis_kelamin }}" class="form-control" placeholder="" readonly>
                         </div>
                     </div>
                     <div class="form-group row mb-0">

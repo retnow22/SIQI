@@ -132,4 +132,32 @@ class PesertaController extends Controller
                         ->with('success','Data Peserta berhasil dihapus!');
                         
     }
+
+    public function profil()
+    {
+        $profil = Peserta::all();
+
+        return view('peserta.profil', ['profil'=>$profil]);
+    }
+
+    public function updateprofil($id, Request $request)
+    {
+        $peserta = Peserta::find($id);
+
+        $request->validate([
+            'nama_peserta' => 'required',
+            'prodi' => 'required',
+            'fakultas' => 'required',
+            'instansi' => 'required',
+            'angkatan' => 'required',
+            'no_hp' => 'required',
+        ]);
+  
+        $peserta->update($request->all());
+  
+        return redirect()->route('peserta.profil')
+                        ->with('success','Biodata berhasil diperbarui!');
+    
+    }
+
 }

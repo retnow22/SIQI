@@ -8,7 +8,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="{{ url('/profil') }}">
+						<a href="{{ route('peserta.profil') }}">
 
 							<span><i class="fa fa-user-circle-o"></i></span>
 							<span>Profil</span>
