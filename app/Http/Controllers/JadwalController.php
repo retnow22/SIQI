@@ -16,7 +16,7 @@ class JadwalController extends Controller
     {
         $jadwal = Matpel::all();
 
-        return view('jadwal.kelola-jadwal',['jadwal'=> $jadwal]);    }
+        return view('jadwal.jadwal',['jadwal'=> $jadwal]);    }
 
     /**
      * Show the form for creating a new resource.
@@ -25,7 +25,7 @@ class JadwalController extends Controller
      */
     public function create()
     {
-        return view('jadwal.tambah-jadwal');
+        return view('jadwal.tambah');
     }
 
     /**
@@ -37,13 +37,14 @@ class JadwalController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'kode_matpel' => 'required',
             'nama_matpel'=> 'required',
             'semester'=> 'required',
             'hari'=> 'required',
             'waktu'=> 'required',
             'level'=> 'required',
             'kuota' => 'required',
+            'kode_pengajar' => 'required',
+            'pengajar_id' => 'required'
         ]);
   
         Matpel::create($request->all());
@@ -89,13 +90,13 @@ class JadwalController extends Controller
         $matpel = Matpel::find($id);
         
         $request->validate([
-            'kode_matpel' => 'required',
             'nama_matpel'=> 'required',
             'semester'=> 'required',
             'hari'=> 'required',
             'waktu'=> 'required',
             'level'=> 'required',
             'kuota' => 'required',
+            'kode_pengajar' => 'required',
         ]);
   
         $matpel->update($request->all());

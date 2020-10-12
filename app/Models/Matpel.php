@@ -9,7 +9,6 @@ class Matpel extends Model
     protected $table = 'matpel';
     
     protected $fillable = [
-        'kode_matpel',
         'nama_matpel',
         'semester',
         'hari',
@@ -17,7 +16,14 @@ class Matpel extends Model
         'level',
         'kode_pengajar',
         'nis',
-        'kuota'
+        'kuota',
+        'pengajar_id',
+        'peserta_id'
     ];
+
+    public function pengajar()
+    {
+        return $this->belongsTo('App\Models\Pengajar');
+    }
 
 }

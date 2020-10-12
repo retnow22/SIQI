@@ -15,7 +15,6 @@ class CreateMatpelTable extends Migration
     {
         Schema::create('matpel', function (Blueprint $table) {
             $table->id();
-            $table->string('kode_matpel');
             $table->string('nama_matpel');
             $table->string('semester');
             $table->string('hari');
@@ -24,6 +23,8 @@ class CreateMatpelTable extends Migration
             $table->string('kode_pengajar')->nullable();
             $table->string('nis')->nullable();
             $table->integer('kuota');
+            $table->integer('pengajar_id')->nullable();
+            $table->integer('peserta_id')->nullable();
             $table->timestamps();
         });
     }

@@ -27,4 +27,9 @@ class Pengajar extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function matpel()
+    {
+        return $this->hasMany('App\Models\Matpel');
+    }
 }

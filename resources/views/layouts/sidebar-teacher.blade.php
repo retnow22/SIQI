@@ -14,7 +14,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="{{ url('/jadwal-mengajar') }}">
+						<a href="{{ route('jadwal.index') }}">
 							<span><i class="fa fa-calendar"></i></span>
 							<span>Jadwal Mengajar</span>
 						</a>
